@@ -87,8 +87,66 @@ $border:2px solid #E7E7E7;
 		}
 
 		//一级导航的第二个li
+		.dhli02{
+			//送礼导航条
+			div.sldh{
+				position:absolute;
+				display:none;
+				height:212px;
+				width:100%;
+				top:96px;
+				left:0px;
+				padding-top:46px;
+				padding-left:92px;
+				.towho{
+					height:30px;
+					width:738px;
+					border-bottom:1px solid #EDEDED;
+				}
+				p>span{
+					padding:0 12px;
+					display:inline-block;
+					font-size:14px;
+					>a{
+						display:block;
+						font-size:14px;
+						height:14px;
+						line-height:14px;
+						color:#333333;
+					}
+				}
+				.towhy{
+					height:30px;
+					padding-top:18px;
+					
+				}
+				i.search{
+					display:block;
+					position:absolute;
+					left:835px;
+					top:152px;
+					
+					>a{
+						display:block;
+						height:40px;
+						width:90px;
+						line-height:40px;
+						font-size:12px;
+						text-align:center;
+						color:#F5F2F2;
+						background-color:#D93732;
+						border-radius:2px;
+					}
+				}
+
+			}
+		}
 
 	}
+
+
+	
+
 	/*右侧的搜索框与图表（购物车与登录）*/
 	.header_r{
 		width:480px;
@@ -104,6 +162,11 @@ $border:2px solid #E7E7E7;
 			position:relative;
 			input{
 				border:none;
+				outline:none;
+				margin-left:5px;
+				padding-left:15px;
+				font-size:12px;
+				line-height:22px;
 			}
 			>a{
 				display:block;
@@ -123,6 +186,9 @@ $border:2px solid #E7E7E7;
 				width:32px;
 				height:32px;
 				border:$border;
+				&:hover{
+					border-color:$highColor;
+				}
 				border-radius:50%;
 				margin:0 5px;
 				position:relative;

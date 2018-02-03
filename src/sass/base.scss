@@ -1,0 +1,26 @@
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, 
+dl, dt, dd, ul, ol, li,pre, form, fieldset, legend, button, input, textarea, 
+  {margin: 0;
+  padding: 0;
+}
+ul,li{list-style:none;}
+a{text-decoration: none;}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clearfix::after{
+    display:block;
+    content:"";
+    height: 0;
+    clear:both;
+    overflow:hidden;
+    visibility:hidden;
+    zoom:1;
+}
+i{font-style: normal;}
+*{box-sizing:border-box;}
+.container{width:1200px;margin:0 auto;}

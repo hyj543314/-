@@ -1,0 +1,6 @@
+*{margin: 0;padding: 0;}
+.lzx-carousel{position:relative;overflow: hidden;margin:60px auto;}
+.lzx-carousel ul{position:absolute;left:0;top:0;}
+.lzx-carousel ul,.lzx-carousel li{list-style: none;}
+.lzx-carousel img{display:block;}
+.lzx-carousel ul li{float:left;width:320px;}

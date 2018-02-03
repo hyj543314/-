@@ -1,0 +1,282 @@
+@charset "UTF-8";
+.header {
+  height: 96px;
+  /*右侧的搜索框与图表（购物车与登录）*/
+}
+
+.header .container {
+  position: relative;
+}
+
+.header .logo {
+  /*主页的logo部分*/
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #D93732;
+  overflow: hidden;
+}
+
+.header .logo .logo_a {
+  background-color: #D93732;
+  width: 100px;
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  padding: 5px 0;
+}
+
+.header .logo .logo_a img {
+  float: left;
+  margin: 0 3px;
+  width: 38px;
+  height: 28px;
+}
+
+.header .dh {
+  /*一级导航条-----*/
+  padding-left: 70px;
+  height: 96px;
+}
+
+.header .dh > li {
+  padding: 38px 22px;
+  float: left;
+  height: 100%;
+}
+
+.header .dh > li a {
+  font-size: 20px;
+  color: #6C3333;
+}
+
+.header .dh > li a:hover {
+  color: #D93732;
+}
+
+.header .dh .dhli01 {
+  width: 134px;
+}
+
+.header .dh .dhli01:hover {
+  background-color: #FFF9AA;
+  /*hover在第一个li时出现二级导航*/
+}
+
+.header .dh .dhli01:hover .erjidh {
+  display: block;
+}
+
+.header .dh .dhli01 .erjidh {
+  padding-top: 32px;
+  margin-left: -22px;
+  width: 134px;
+  display: none;
+}
+
+.header .dh .dhli01 .erjidh > li {
+  border-bottom: 2px solid #E7E7E7;
+  background-color: #FFF9AA;
+  width: 100%;
+}
+
+.header .dh .dhli01 .erjidh > li > a {
+  display: block;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  color: #333333;
+  font-size: 14px;
+}
+
+.header .dh .dhli01 .erjidh > li > a:hover {
+  color: #D93732;
+}
+
+.header .header_r {
+  width: 480px;
+  height: 96px;
+  padding-top: 38px;
+  padding-left: 72px;
+  position: relative;
+}
+
+.header .header_r .search {
+  width: 240px;
+  height: 32px;
+  border: 2px solid #E7E7E7;
+  border-radius: 16px;
+  position: relative;
+}
+
+.header .header_r .search input {
+  border: none;
+}
+
+.header .header_r .search > a {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 2px;
+  width: 16px;
+  height: 23px;
+  background: url(img/header06.png) no-repeat;
+}
+
+.header .header_r .signCar {
+  width: 100px;
+}
+
+.header .header_r .signCar .circle {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #E7E7E7;
+  border-radius: 50%;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header .header_r .signCar .circle .tubiao {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+.header .header_r .signCar .circle .tubiao > li:last-child {
+  margin-top: 8px;
+}
+
+.footer {
+  height: 560px;
+}
+
+.footer .footer01 {
+  height: 200px;
+}
+
+.footer .footer01 ul.clearfix {
+  padding: 58px 0px;
+}
+
+.footer .footer01 ul.clearfix > li {
+  width: 300px;
+  border-right: 2px solid #E7E7E7;
+  float: left;
+}
+
+.footer .footer01 ul.clearfix > li img {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer .footer01 ul.clearfix > li .gzwm {
+  font-size: 18px;
+  color: #color;
+  height: 28px;
+  line-height: 38px;
+  padding-left: 56px;
+}
+
+.footer .footer01 ul.clearfix > li:last-child {
+  border: none;
+  padding-left: 54px;
+}
+
+.footer .footer01 ul.clearfix > li:last-child h3 {
+  height: 30px;
+  font-size: 20px;
+}
+
+.footer .footer01 ul.clearfix > li:last-child .time {
+  padding-left: 6px;
+  height: 14px;
+  font-size: 12px;
+}
+
+.footer .footer01 ul.clearfix > li:last-child .chat {
+  height: 30px;
+  border-radius: 15px;
+  border: 2px solid #E7E7E7;
+  margin-top: 10px;
+  width: 148px;
+}
+
+.footer .footer01 ul.clearfix > li:last-child .chat:hover {
+  border: 2px solid #D93732;
+}
+
+.footer .footer01 ul.clearfix > li:last-child .chat a {
+  display: block;
+  height: 30px;
+  line-height: 26px;
+  width: 100%;
+  text-align: center;
+  color: #6C3333;
+  font-size: 12px;
+}
+
+.footer .footer02 {
+  height: 360px;
+  background-color: #484442;
+}
+
+.footer .footer02 .footer02_t {
+  height: 142px;
+  border-bottom: 2px solid #666666;
+}
+
+.footer .footer02 .footer02_t > ul > li {
+  float: left;
+  position: relative;
+  width: 320px;
+}
+
+.footer .footer02 .footer02_t > ul > li .secu {
+  padding-left: 30px;
+  height: 142px;
+  line-height: 142px;
+  text-align: center;
+  color: #E7E7E7;
+  font-size: 22px;
+}
+
+.footer .footer02 .footer02_t > ul > li .secu03 {
+  padding-left: 10px;
+}
+
+.footer .footer02 .footer02_t > ul > li > i {
+  display: block;
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(img/footer.fw.png) no-repeat;
+}
+
+.footer .footer02 .footer02_t > ul .last {
+  width: 240px;
+}
+
+.footer .footer02 .footer02_t > ul .last .la {
+  padding-left: 10px;
+}
+
+.footer .footer02 .footer02_t > ul .last .lasti {
+  left: -16px;
+}
+
+.footer .footer02 .footer02_m {
+  height: 102px;
+  border-bottom: 2px solid #666666;
+}
+
+.footer .footer02 .footer02_b {
+  height: 114px;
+}

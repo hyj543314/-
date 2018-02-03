@@ -67,6 +67,8 @@ $border:2px solid #E7E7E7;
 			padding-top:32px;
 			margin-left:-22px;
 			width:134px;
+			position:relative;
+			z-index:1;
 			display:none;
 			>li{
 				border-bottom:$border;
@@ -91,13 +93,12 @@ $border:2px solid #E7E7E7;
 			//送礼导航条
 			div.sldh{
 				position:absolute;
+				background:#fff;
+				z-index:1;
 				display:none;
 				height:212px;
-				width:100%;
 				top:96px;
-				left:0px;
 				padding-top:46px;
-				padding-left:92px;
 				.towho{
 					height:30px;
 					width:738px;

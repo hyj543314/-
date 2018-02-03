@@ -277,6 +277,71 @@
   border-bottom: 2px solid #666666;
 }
 
+.footer .footer02 .footer02_m div.fl > p {
+  font-size: 14px;
+  padding-left: 30px;
+  color: #C3C3C3;
+  line-height: 102px;
+}
+
+.footer .footer02 .footer02_m div.fl > p > a {
+  color: #C3C3C3;
+  padding-left: 16px;
+}
+
+.footer .footer02 .footer02_m ul.fr {
+  width: 504px;
+}
+
+.footer .footer02 .footer02_m ul.fr > li {
+  float: left;
+  width: 84px;
+  height: 102px;
+  padding-top: 44px;
+}
+
+.footer .footer02 .footer02_m ul.fr > li a {
+  font-size: 14px;
+  text-align: center;
+  border-right: 1px solid #ABC3AA;
+  display: block;
+  height: 15px;
+  line-height: 14px;
+  color: #C3C3C3;
+}
+
+.footer .footer02 .footer02_m ul.fr > li a.last {
+  border-right: none;
+}
+
 .footer .footer02 .footer02_b {
   height: 114px;
+  padding-left: 30px;
+  padding-top: 24px;
+  position: relative;
+}
+
+.footer .footer02 .footer02_b div.links {
+  width: 990px;
+}
+
+.footer .footer02 .footer02_b div.links span {
+  padding: 0px 4px;
+  display: inline-block;
+  color: #C3C3C3;
+  font-size: 12px;
+}
+
+.footer .footer02 .footer02_b div.links span > a {
+  color: #C3C3C3;
+}
+
+.footer .footer02 .footer02_b i.brand {
+  display: block;
+  position: absolute;
+  width: 120px;
+  height: 48px;
+  left: 1016px;
+  top: 24px;
+  background: url(img/footer08.png) no-repeat;
 }

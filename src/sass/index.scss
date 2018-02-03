@@ -246,10 +246,68 @@ $border:2px solid #E7E7E7;
 		}
 		.footer02_m{
 			height:102px;
+			
 			border-bottom:2px solid #666666;
+			div.fl>p{
+				font-size:14px;
+				padding-left:30px;
+				color:#C3C3C3;
+				line-height:102px;
+				>a{
+					color:#C3C3C3;
+					padding-left:16px;
+				}
+			}
+			ul.fr{
+				width:504px;
+			}
+			ul.fr>li{
+				float:left;
+				width:84px;
+				height:102px;
+				padding-top:44px;
+				a{
+					font-size:14px;
+					text-align:center;
+					border-right:1px solid #ABC3AA;
+					display:block;
+					height:15px;
+					line-height:14px;
+					color:#C3C3C3;
+
+				}
+				a.last{
+					border-right:none;
+				}
+			}
 		}
 		.footer02_b{
 			height:114px;
+			padding-left:30px;
+			padding-top:24px;
+			position:relative;
+			div.links{
+				width:990px;
+
+				span{
+					padding:0px 4px;
+					display:inline-block;
+					color:#C3C3C3;
+					font-size:12px;
+					>a{
+						color:#C3C3C3;
+					}
+				}
+			}
+			i.brand{
+				display:block;
+				position:absolute;
+				width:120px;
+				height:48px;
+				left:1016px;
+				top:24px;
+				background:url(img/footer08.png) no-repeat;
+			}
 		}
 	}
 }

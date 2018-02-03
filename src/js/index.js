@@ -39,6 +39,7 @@ require(['config'],function(){
 			// 隐藏导航
 			$(this).find('.sldh').css('display','none');
 		})
+		// 二级导航条的一些样式
 		var $lef = $header.find('.container').offset().left;
 		console.log($lef);
 		$header.find('.sldh').css({
@@ -56,6 +57,10 @@ require(['config'],function(){
 			width:innerWidth,
 			height:480
 		})
+
+
+		// 主要内容的头部部分
+
 
 
 

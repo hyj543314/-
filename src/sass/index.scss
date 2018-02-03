@@ -208,6 +208,93 @@ $border:2px solid #E7E7E7;
 	}
 }
 
+
+//主要内容的头部
+.main_header{
+	height:108px;
+	ul>li{
+		width:300px;
+		float:left;
+		padding-left:34px;
+		padding-top:26px;
+		.circle{
+			width:54px;
+			height:54px;
+			border-radius:50%;
+			border:2px solid #666666;
+			float:left;
+			background:url(img/main.fw.png) no-repeat 9px 5px;
+		}
+		>a{
+			display:block;
+			color:#666666;
+			font-size:18px;
+			float:left;
+			margin:15px 0 0 10px;
+		}
+	}
+}
+
+
+//主要内容
+.main{
+	background-color:#F5F5F5;
+	//每个小内容块标题的公共样式
+	.main_til{
+		height: 64px;
+		padding-left:10px;
+		padding-top:18px;
+		position:relative;
+		.same{
+			display:inline-block;
+			font-size:20px;
+			color:#666666;
+			height:22px;
+		}
+		h3{
+			font-weight:normal;
+		}
+		a{
+			float:right;
+		}
+		.hx{
+			position:absolute;
+			display:block;
+			width:1005px;
+			height:10px;
+			background:url(img/main09.png) no-repeat;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
+	}
+	.main01{
+		padding:45px 0px;
+		ul>li{
+			float:left;
+			width:290px;
+			border:2px solid #F5F5F5;
+			margin-right:13px;
+			&:hover{
+				border: 2px solid #D93732;
+			}
+			a{
+				display:block;
+				img{
+					display:block;
+					height:100%;
+					width:100%;
+				}
+			}
+		}
+		ul .last{
+			margin-right:0;
+		}
+	}
+}
+
+
+
 //底部部分
 .footer{
 	height:560px;

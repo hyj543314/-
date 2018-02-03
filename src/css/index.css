@@ -216,6 +216,100 @@
   margin-top: 8px;
 }
 
+.main_header {
+  height: 108px;
+}
+
+.main_header ul > li {
+  width: 300px;
+  float: left;
+  padding-left: 34px;
+  padding-top: 26px;
+}
+
+.main_header ul > li .circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid #666666;
+  float: left;
+  background: url(img/main.fw.png) no-repeat 9px 5px;
+}
+
+.main_header ul > li > a {
+  display: block;
+  color: #666666;
+  font-size: 18px;
+  float: left;
+  margin: 15px 0 0 10px;
+}
+
+.main {
+  background-color: #F5F5F5;
+}
+
+.main .main_til {
+  height: 64px;
+  padding-left: 10px;
+  padding-top: 18px;
+  position: relative;
+}
+
+.main .main_til .same {
+  display: inline-block;
+  font-size: 20px;
+  color: #666666;
+  height: 22px;
+}
+
+.main .main_til h3 {
+  font-weight: normal;
+}
+
+.main .main_til a {
+  float: right;
+}
+
+.main .main_til .hx {
+  position: absolute;
+  display: block;
+  width: 1005px;
+  height: 10px;
+  background: url(img/main09.png) no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main .main01 {
+  padding: 45px 0px;
+}
+
+.main .main01 ul > li {
+  float: left;
+  width: 290px;
+  border: 2px solid #F5F5F5;
+  margin-right: 13px;
+}
+
+.main .main01 ul > li:hover {
+  border: 2px solid #D93732;
+}
+
+.main .main01 ul > li a {
+  display: block;
+}
+
+.main .main01 ul > li a img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.main .main01 ul .last {
+  margin-right: 0;
+}
+
 .footer {
   height: 560px;
 }

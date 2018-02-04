@@ -504,10 +504,13 @@ $border:2px solid #E7E7E7;
 				p:last-child{
 					span{
 						display:inline-block;
-						width:65px;
-						height:14px;
+						width:90px;
+						height:12px;
 						font-size:14px;
 						color:#8C3333;
+					}
+					span:first-child{
+						padding-left:10px;
 					}
 				}
 				&:hover{

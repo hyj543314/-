@@ -246,6 +246,7 @@
 
 .main {
   background-color: #F5F5F5;
+  padding-bottom: 80px;
 }
 
 .main .main_til {
@@ -307,6 +308,241 @@
 }
 
 .main .main01 ul .last {
+  margin-right: 0;
+}
+
+.main .main02 {
+  margin-bottom: 30px;
+}
+
+.main .main02 ul {
+  margin-bottom: 10px;
+}
+
+.main .main02 ul li {
+  float: left;
+  border: 2px solid #F5F5F5;
+  margin-right: 12px;
+  background-color: #fff;
+}
+
+.main .main02 ul li:hover {
+  border-color: #D93732;
+}
+
+.main .main02 ul li a {
+  display: block;
+}
+
+.main .main02 ul li a img {
+  display: block;
+  margin: 0 auto;
+  width: 190px;
+  height: 174px;
+}
+
+.main .main02 .ul_01 > li {
+  width: 288px;
+}
+
+.main .main02 .ul_01 > li > a {
+  height: 250px;
+}
+
+.main .main02 .ul_01 > li > a img {
+  display: block;
+  margin: 0 auto;
+  width: 190px;
+  height: 174px;
+}
+
+.main .main02 .ul_01 > li > a .list {
+  width: 100%;
+  height: 100%;
+}
+
+.main .main02 .ul_01 > li > a p {
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  height: 30px;
+}
+
+.main .main02 .ul_01 > li > a .decp {
+  line-height: 16px;
+}
+
+.main .main02 .ul_01 > li > a .price {
+  line-height: 14px;
+  color: #414141;
+}
+
+.main .main02 li.last {
+  margin-right: 0;
+}
+
+.main .main02 .ul_02 li {
+  height: 250px;
+}
+
+.main .main02 .ul_02 li > a > div {
+  float: left;
+  width: 50%;
+  padding-top: 20px;
+}
+
+.main .main02 .ul_02 li > a > div p {
+  text-align: center;
+  color: #5B5B5B;
+  font-size: 14px;
+}
+
+.main .main02 .ul_02 li > a div.wenzi {
+  margin-left: -18px;
+}
+
+.main .main02 .ul_02 li:nth-child(1) {
+  width: 450px;
+}
+
+.main .main02 .ul_02 li:nth-child(2) {
+  width: 290px;
+}
+
+.main .main02 .ul_02 li:nth-child(2) p {
+  text-align: center;
+  height: 30px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.main .main02 .ul_02 li:nth-child(3) {
+  width: 435px;
+}
+
+.main .main02 .ul_02 .news {
+  font-size: 24px;
+  height: 92px;
+  line-height: 110px;
+  color: #666666;
+}
+
+.main .main03, .main .main04 {
+  margin-bottom: 30px;
+}
+
+.main .main03 div.cont ul, .main .main04 div.cont ul {
+  width: 950px;
+}
+
+.main .main03 div.cont a.fl, .main .main04 div.cont a.fl {
+  margin-right: 11px;
+}
+
+.main .main03 div.cont a, .main .main04 div.cont a {
+  display: block;
+  border: 2px solid #F5F5F5;
+}
+
+.main .main03 div.cont a:hover, .main .main04 div.cont a:hover {
+  border-color: #D93732;
+}
+
+.main .main03 div.cont li, .main .main04 div.cont li {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.main .main03 div.cont li a, .main .main04 div.cont li a {
+  width: 230px;
+  height: 275px;
+  padding-top: 10px;
+}
+
+.main .main03 div.cont li a img, .main .main04 div.cont li a img {
+  display: block;
+  margin: 0 auto;
+  width: 190px;
+  height: 174px;
+}
+
+.main .main03 div.cont li a p, .main .main04 div.cont li a p {
+  font-size: 14px;
+  text-align: center;
+  height: 30px;
+  line-height: 46px;
+  color: #666666;
+}
+
+.main .main03 div.cont li.last, .main .main04 div.cont li.last {
+  margin-right: 0;
+}
+
+.main .main03 .bigpic, .main .main04 .bigpic {
+  float: left;
+  width: 230px;
+  height: 565px;
+}
+
+.main .main05 {
+  width: 100%;
+}
+
+.main .main05 ul {
+  width: 100%;
+}
+
+.main .main05 ul li {
+  width: 24.25%;
+  margin-right: 1%;
+  padding: 1%;
+  float: left;
+  background-color: #fff;
+  border: 2px solid #F5F5F5;
+}
+
+.main .main05 ul li a {
+  display: block;
+  width: 100%;
+  height: 188px;
+}
+
+.main .main05 ul li a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.main .main05 ul li .cont {
+  height: 100px;
+  color: #333333;
+  font-size: 14px;
+  padding-top: 22px;
+  line-height: 22px;
+}
+
+.main .main05 ul li .user_cont {
+  height: 24px;
+  font-size: 12px;
+  color: #AAC5EC;
+  line-height: 14px;
+}
+
+.main .main05 ul li p:last-child span {
+  display: inline-block;
+  width: 65px;
+  height: 14px;
+  font-size: 14px;
+  color: #8C3333;
+}
+
+.main .main05 ul li:hover {
+  border-color: #D93732;
+}
+
+.main .main05 ul li.last {
   margin-right: 0;
 }
 

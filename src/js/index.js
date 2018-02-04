@@ -1,6 +1,7 @@
 require(['config'],function(){
 	// console.log(666);
-	require(['jquery','carousel'],function($,carou){
+	require(['jquery','carousel','com'],function($,carou,com){
+		// console.log(com.randomNumber(0,10));
 		var $header = $('.header');
 		var $logo = $('.header .logo');
 		// console.log($logo);

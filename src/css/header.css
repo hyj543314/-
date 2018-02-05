@@ -1,0 +1,217 @@
+@charset "UTF-8";
+.header {
+  height: 96px;
+  /*右侧的搜索框与图表（购物车与登录）*/
+}
+
+.header .container {
+  position: relative;
+}
+
+.header .logo {
+  /*主页的logo部分*/
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #D93732;
+  overflow: hidden;
+}
+
+.header .logo .logo_a {
+  background-color: #D93732;
+  width: 100px;
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  padding: 5px 0;
+}
+
+.header .logo .logo_a img {
+  float: left;
+  margin: 0 3px;
+  width: 38px;
+  height: 28px;
+}
+
+.header .dh {
+  /*一级导航条-----*/
+  padding-left: 70px;
+  height: 96px;
+}
+
+.header .dh > li {
+  padding: 38px 22px;
+  float: left;
+  height: 100%;
+}
+
+.header .dh > li a {
+  font-size: 20px;
+  color: #6C3333;
+}
+
+.header .dh > li a:hover {
+  color: #D93732;
+}
+
+.header .dh .dhli01 {
+  width: 134px;
+}
+
+.header .dh .dhli01:hover {
+  background-color: #FFF9AA;
+  /*hover在第一个li时出现二级导航*/
+}
+
+.header .dh .dhli01:hover .erjidh {
+  display: block;
+}
+
+.header .dh .dhli01 .erjidh {
+  padding-top: 32px;
+  margin-left: -22px;
+  width: 134px;
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
+.header .dh .dhli01 .erjidh > li {
+  border-bottom: 2px solid #E7E7E7;
+  background-color: #FFF9AA;
+  width: 100%;
+}
+
+.header .dh .dhli01 .erjidh > li > a {
+  display: block;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  color: #333333;
+  font-size: 14px;
+}
+
+.header .dh .dhli01 .erjidh > li > a:hover {
+  color: #D93732;
+}
+
+.header .dh .dhli02 div.sldh {
+  position: absolute;
+  background: #fff;
+  z-index: 1;
+  display: none;
+  height: 212px;
+  top: 96px;
+  padding-top: 46px;
+}
+
+.header .dh .dhli02 div.sldh .towho {
+  height: 30px;
+  width: 738px;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.header .dh .dhli02 div.sldh p > span {
+  padding: 0 12px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.header .dh .dhli02 div.sldh p > span > a {
+  display: block;
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #333333;
+}
+
+.header .dh .dhli02 div.sldh .towhy {
+  height: 30px;
+  padding-top: 18px;
+}
+
+.header .dh .dhli02 div.sldh i.search {
+  display: block;
+  position: absolute;
+  left: 835px;
+  top: 152px;
+}
+
+.header .dh .dhli02 div.sldh i.search > a {
+  display: block;
+  height: 40px;
+  width: 90px;
+  line-height: 40px;
+  font-size: 12px;
+  text-align: center;
+  color: #F5F2F2;
+  background-color: #D93732;
+  border-radius: 2px;
+}
+
+.header .header_r {
+  width: 480px;
+  height: 96px;
+  padding-top: 38px;
+  padding-left: 72px;
+  position: relative;
+}
+
+.header .header_r .search {
+  width: 240px;
+  height: 32px;
+  border: 2px solid #E7E7E7;
+  border-radius: 16px;
+  position: relative;
+}
+
+.header .header_r .search input {
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  padding-left: 15px;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.header .header_r .search > a {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 2px;
+  width: 16px;
+  height: 23px;
+  background: url(img/header06.png) no-repeat;
+}
+
+.header .header_r .signCar {
+  width: 100px;
+}
+
+.header .header_r .signCar .circle {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #E7E7E7;
+  border-radius: 50%;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header .header_r .signCar .circle:hover {
+  border-color: #D93732;
+}
+
+.header .header_r .signCar .circle .tubiao {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+}
+
+.header .header_r .signCar .circle .tubiao > li:last-child {
+  margin-top: 8px;
+}

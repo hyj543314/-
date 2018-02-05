@@ -42,7 +42,7 @@ require(['config'],function(){
 		// 二级导航条的一些样式
 		// var $lef = $header.find('.container').offset().left;
 		var $lef = $header.find('.container').offset().left;
-		console.log($header);
+		// console.log($header);
 		$header.find('.sldh').css({
 			width: innerWidth,
 			left: -$lef,

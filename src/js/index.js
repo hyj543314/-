@@ -102,8 +102,6 @@ require(['config'],function(){
 
 
 		})
-
-		
 		// console.log(com.randomNumber(0,10));
 		// var $header = $('.header');
 		// var $logo = $('.header .logo');

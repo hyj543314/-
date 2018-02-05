@@ -1,0 +1,100 @@
+// 导入scss文件
+@import '_var';
+
+//全局背景颜色
+$bgc:#F5F5F5;
+//全局字体颜色
+$color:#333333;
+//全局字体大小
+$fsize:12px;
+.hty{
+	background-color:$bgc;
+	height:62px;
+	width:100%;
+	padding-top:24px;
+	.hty_l{
+		float:left;
+		>a{
+			display:inline-block;
+			height:16px;
+			font-size:$fsize;
+			color:$color;
+		}
+	}
+	.hty_r{
+		width:380px;
+		h5,a{
+			display:inline-block;
+			font-size:$fsize;
+			color:$color;
+		}
+		h5{
+			font-weight:normal;
+			line-height:25px;
+			height:20px;
+		}
+		a{	
+			margin-left:10px;
+			width:92px;
+			height:24px;
+			line-height:20px;
+			border:2px solid #A8A8A7;
+			border-radius:12px;
+			text-align:center;
+			&:hover{
+				border-color:#D93732;
+			}
+		}
+	}
+}
+
+//种类选择
+.nav{
+	.container{
+		.sort{
+			border-bottom:1px solid $bgc;
+			width:100%;
+			padding-left:12px;
+			padding-top:30px;
+			height:70px;
+			>span,>a{
+				display:inline-block;
+				padding:0 13px;
+				font-size:14px;
+				color:$color;
+			}
+		}
+		div.last{
+			border-bottom:0;
+		}
+	}
+}
+
+
+
+//商品内容
+.main{
+	background-color:$bgc;
+	.goodsPri{
+		height:110px;
+		padding:52px 0 42px;
+		>a{
+			display:inline-block;
+			height:16px;
+			font-size:14px;
+			border-right:1px solid $bgc;
+			padding:0 20px;
+			color:$color;
+			&:hover{
+				color:#D93732;
+			}
+		}
+		//高亮字体颜色
+		.active{
+			color:#D93732;
+		}
+		a.last{
+			border-right:0;
+		}
+	}
+}

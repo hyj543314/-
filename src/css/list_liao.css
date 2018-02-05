@@ -1,0 +1,96 @@
+.hty {
+  background-color: #F5F5F5;
+  height: 62px;
+  width: 100%;
+  padding-top: 24px;
+}
+
+.hty .hty_l {
+  float: left;
+}
+
+.hty .hty_l > a {
+  display: inline-block;
+  height: 16px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.hty .hty_r {
+  width: 380px;
+}
+
+.hty .hty_r h5, .hty .hty_r a {
+  display: inline-block;
+  font-size: 12px;
+  color: #333333;
+}
+
+.hty .hty_r h5 {
+  font-weight: normal;
+  line-height: 25px;
+  height: 20px;
+}
+
+.hty .hty_r a {
+  margin-left: 10px;
+  width: 92px;
+  height: 24px;
+  line-height: 20px;
+  border: 2px solid #A8A8A7;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.hty .hty_r a:hover {
+  border-color: #D93732;
+}
+
+.nav .container .sort {
+  border-bottom: 1px solid #F5F5F5;
+  width: 100%;
+  padding-left: 12px;
+  padding-top: 30px;
+  height: 70px;
+}
+
+.nav .container .sort > span, .nav .container .sort > a {
+  display: inline-block;
+  padding: 0 13px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.nav .container div.last {
+  border-bottom: 0;
+}
+
+.main {
+  background-color: #F5F5F5;
+}
+
+.main .goodsPri {
+  height: 110px;
+  padding: 52px 0 42px;
+}
+
+.main .goodsPri > a {
+  display: inline-block;
+  height: 16px;
+  font-size: 14px;
+  border-right: 1px solid #F5F5F5;
+  padding: 0 20px;
+  color: #333333;
+}
+
+.main .goodsPri > a:hover {
+  color: #D93732;
+}
+
+.main .goodsPri .active {
+  color: #D93732;
+}
+
+.main .goodsPri a.last {
+  border-right: 0;
+}

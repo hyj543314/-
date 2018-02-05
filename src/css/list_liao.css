@@ -165,6 +165,11 @@
   margin-right: 0;
 }
 
+.main .page {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 .main .page span {
   display: inline-block;
   margin: 5px;

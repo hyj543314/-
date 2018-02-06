@@ -118,6 +118,7 @@ $highColor:#D93732;
 				}
 				
 			}
+			//样式选择
 			.sort{
 				padding-top:42px;
 				>p{
@@ -144,6 +145,56 @@ $highColor:#D93732;
 					}
 				}
 			}
+			//购买按钮
+			div.buy{
+				padding-bottom:30px;
+				border-bottom:1px solid $bgc;
+				>a{
+					text-align:center;
+					height:44px;
+
+				}
+				a.tz{
+					width:400px;
+					font-size:14px;
+					color:#fff;
+					line-height:44px;
+					background-color:$highColor;
+				}
+				a.collect{
+					width:46px;
+					margin:0 8px;
+					background-color:#E2E2E2;
+				}
+			}
+			//查看更多商品
+			div.check{
+				padding-top:30px;
+				padding-left:28px;
+				a{
+					float:left;
+					font-size:14px;
+					color:$color;
+					&:hover{
+						color:$highColor;
+					}
+				}
+			}
+		}
+	}
+}
+
+//商品详情评价等
+.detMsg{
+	.nav{
+		height:68px;
+		text-align:center;
+		padding-top:22px;
+		.container>span{
+			display:inline-block;
+			padding:0 22px;
+			font-size:22px;
+			color:$color;
 		}
 	}
 }

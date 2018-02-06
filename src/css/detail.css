@@ -155,3 +155,55 @@
   color: #D93732;
   border-color: #D93732;
 }
+
+.goodsMsg .container .goodsMsg_r div.buy {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+.goodsMsg .container .goodsMsg_r div.buy > a {
+  text-align: center;
+  height: 44px;
+}
+
+.goodsMsg .container .goodsMsg_r div.buy a.tz {
+  width: 400px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 44px;
+  background-color: #D93732;
+}
+
+.goodsMsg .container .goodsMsg_r div.buy a.collect {
+  width: 46px;
+  margin: 0 8px;
+  background-color: #E2E2E2;
+}
+
+.goodsMsg .container .goodsMsg_r div.check {
+  padding-top: 30px;
+  padding-left: 28px;
+}
+
+.goodsMsg .container .goodsMsg_r div.check a {
+  float: left;
+  font-size: 14px;
+  color: #333333;
+}
+
+.goodsMsg .container .goodsMsg_r div.check a:hover {
+  color: #D93732;
+}
+
+.detMsg .nav {
+  height: 68px;
+  text-align: center;
+  padding-top: 22px;
+}
+
+.detMsg .nav .container > span {
+  display: inline-block;
+  padding: 0 22px;
+  font-size: 22px;
+  color: #333333;
+}

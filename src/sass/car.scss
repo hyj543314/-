@@ -1,0 +1,248 @@
+// 导入scss文件
+@import '_var';
+
+//背景颜色
+$bgc:#F5F5F5;
+//全局字体颜色
+$color:#333333;
+//全局字体大小
+$fsize:12px;
+$highColor:#D93732;
+
+//头部
+.carHeader{
+	height:96px;
+	.container{
+		position:relative;
+		height:100%;
+	}
+	h1{
+		padding-left:85px;
+		height:100%;
+		font-size:28px;
+		line-height:96px;
+		font-weight:normal;
+	}
+	//logo图标
+	.logo{
+		/*主页的logo部分*/
+		width:56px;
+		height:56px;
+		border-radius:50%;
+		position:absolute;
+		left:0;
+		top:50%;
+		transform:translateY(-50%);
+		background-color:#D93732;
+		overflow:hidden;
+		.logo_a{
+			background-color:#D93732;
+			width:100px;
+			position:absolute;
+			left:5px;
+			top:8px;
+			padding:5px 0;
+			img{
+				float:left;
+				margin:0 3px;
+				width:38px;
+				height:28px;
+			}
+		}
+		//background:url(img/header.fw.png);
+	}
+}
+
+
+.hty{
+	background-color:$bgc;
+	height:62px;
+	width:100%;
+	padding-top:24px;
+	.hty_l{
+		float:left;
+		>a{
+			display:inline-block;
+			height:16px;
+			font-size:$fsize;
+			color:$color;
+		}
+	}
+	.hty_r{
+		width:380px;
+		h5,a{
+			display:inline-block;
+			font-size:$fsize;
+			color:$color;
+		}
+		h5{
+			font-weight:normal;
+			line-height:25px;
+			height:20px;
+		}
+		a{	
+			margin-left:10px;
+			width:92px;
+			height:24px;
+			line-height:20px;
+			border:2px solid #A8A8A7;
+			border-radius:12px;
+			text-align:center;
+			&:hover{
+				border-color:$highColor;
+			}
+		}
+	}
+}
+
+
+//购物车内容
+.carList{
+	height:326px;
+	background-color:$bgc;
+	.container{
+		.carMain{
+			height:284px;
+			background-color:#fff;
+			.carMain_t{
+				height:70px;
+				
+				border-bottom:1px solid $bgc;
+				span{
+					display:inline-block;
+					font-size:14px;
+					padding:0 46px;
+					color:$color;
+					line-height:70px;
+				}
+			}
+			.carMain_m{
+				height:130px;
+				border-bottom:1px solid $bgc;
+				div.fl{
+					position:relative;
+					height:100%;
+					img{
+						display:block;
+						position:absolute;
+						width:94px;
+						height:88px;
+						left:36px;
+						top:50%;
+						transform:translateY(-50%);
+					}
+					p{
+						font-size:$fsize;
+						height:20px;
+						line-height:16px;
+						padding-left:140px;
+					}
+					.name{
+						color:$color;
+						margin-top:24px;
+					}
+					.ty{
+						color:#666666;
+					}
+				}
+				div.fr{
+					height:100%;
+					span{
+						padding:0 41px;
+						display:inline-block;
+						font-size:14px;
+						color:$color;
+						line-height:130px;
+					}
+					span.qty{
+						padding:0;
+						position:relative;
+						input{
+							width:114px;
+							height:40px;
+							border:none;
+							outline:none;
+							text-align:center;
+							border:1px solid #DDDDDD;
+						}
+						a{
+							display:block;
+							width:20px;
+							height:14px;
+							position:absolute;
+							top:50%;
+							transform:translateY(-50%);
+						}
+						a.add{
+							right:1px;
+							background:url(img/car03.png) no-repeat;
+						}
+						a.reduce{
+							left:1px;
+							background:url(img/car02.png) no-repeat;
+						}
+					}
+					span.del{
+						position:relative;
+						width:115px;
+						a{
+							display:block;
+							width:24px;
+							height:40px;
+							position:absolute;
+							left:38px;
+							top:-28px;
+							background:url(img/car04.png) no-repeat;
+						}
+					}
+				}
+			}
+
+			.carMain_b{
+				height:82px;
+				>div{
+					height:100%;
+				}
+				div.fl{
+					padding-left:36px;
+					position:relative;
+					a{
+						font-size:14px;
+						color:$color;
+						line-height:82px;
+						padding-left:22px;
+						background:url(img/car01.png) no-repeat -2px -4px;
+					}
+				}
+				div.fr{
+					width:526px;
+					position:relative;
+					>p{
+						font-size:14px;
+						color:$color;
+						line-height:82px;
+						i{
+							padding:0 5px;
+							color:$highColor;
+						}
+					}
+					a.deal{
+						height:48px;
+						width:200px;
+						display:block;
+						position:absolute;
+						right:36px;
+						top:50%;
+						transform:translateY(-50%);
+						background:$highColor;
+						text-align:center;
+						line-height:48px;
+						color:#fff;
+						font-size:14px;
+						border-radius:5px;
+					}
+				}
+			}
+		}
+	}
+}

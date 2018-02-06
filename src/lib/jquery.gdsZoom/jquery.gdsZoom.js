@@ -42,6 +42,7 @@
 				var left,top;
 				if(opt.position === 'right'){
 					left = $small.offset().left + $small.outerWidth() + opt.gap;
+					// console.log('left:',left);
 					top = $small.offset().top;
 				}else if(opt.position === 'left'){
 					left = $small.offset().left - opt.width - opt.gap;
@@ -87,6 +88,7 @@
 					// 计算比例
 					ratio = $bigImg.outerWidth()/$smallImg.outerWidth();
 
+					// console.log('ratio:',ratio,'bigImg',$bigImg.outerWidth());
 					// 设置放大镜的大小
 					// 与大图区域成比例
 					$minzoom.css({
@@ -98,14 +100,19 @@
 					$big.hide();
 					$minzoom.hide();
 				}).on('mousemove',function(e){
+					// console.log(e.clientX);
+				
 					var left = e.pageX - $small.offset().left - $minzoom.outerWidth()/2;
+					// console.log(left);
+					// console.log($smallImg.offset().left,$small.offset().left,$minzoom.outerWidth()/2,e.pageX,left)
 					var top = e.pageY - $small.offset().top - $minzoom.outerHeight()/2;
 
 					// 边界判断
-					if(left<0){
-						left = 0;
-					}else if(left > $smallImg.innerWidth()-$minzoom.outerWidth()){
-						left = $smallImg.innerWidth()-$minzoom.outerWidth()
+					let ga = $smallImg.offset().left - $small.offset().left;
+					if(left<ga){
+						left = ga;
+					}else if(left > $smallImg.innerWidth()-$minzoom.outerWidth()+ga){
+						left = $smallImg.innerWidth()-$minzoom.outerWidth()+ga
 					}
 
 

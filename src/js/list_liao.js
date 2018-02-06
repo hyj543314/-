@@ -113,8 +113,7 @@ require(['config'],function(){
 				$main_con.on('click','a',function(e){
 					// console.log(e.target,this);
 					let idx = $(this).closest('li').attr('data-guid');
-					this.href += `?id=${idx}`;
-					
+					this.href = `${this.href}?id=${idx}`;
 				})
 
 

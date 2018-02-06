@@ -1,0 +1,63 @@
+// 导入scss文件
+@import '_var';
+
+//背景颜色
+$bgc:#F5F5F5;
+//全局字体颜色
+$color:#333333;
+//全局字体大小
+$fsize:12px;
+$highColor:#D93732;
+
+
+.main{
+	height:768px;
+	width:100%;
+	position:relative;
+	background:url(img/login_bg.jpg) no-repeat;
+	.lg{
+		width:560px;
+		height:590px;
+		background-color:#fff;
+		position:absolute;
+		right:168px;
+		top:110px;
+		padding:65px 86px;
+		h1{
+			height:56px;
+			font-size:30px;
+			i,a{
+				font-size:16px;
+				float:right;
+				line-height:32px;
+				font-weight:normal;
+			}
+			>i{
+				color:$color;
+			}
+			>a{
+				color:#DAA550;
+			}
+		}
+		.lg_in{
+			height:62px;
+			width:100%;
+			input{
+				height:40px;
+				width:100%;
+				border:1px solid $bgc;
+				padding-left:10px;
+				font-size:14px;
+				line-height:38px;
+				color:$color;
+			}
+			p{
+				font-size:14px;
+				padding-left:10px;
+				line-height:22px;
+				height:22px;
+				color:$highColor;
+			}
+		}
+	}
+}

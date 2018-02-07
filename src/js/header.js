@@ -15,14 +15,23 @@ require(['config'],function(){
 		});
 
 		// 购物车与登录图标动画切换
-		$('.header').on('mouseenter','ul.tubiao',function(){
-			$(this).stop().animate({
-				top:-23
+		$('.header').on('mouseenter','.signCar .circle',function(){
+			
+			$(this).find('ul.tubiao').first().stop().animate({
+				top:-20
 			});
-		}).on('mouseleave','ul.tubiao',function(){
-			$(this).stop().animate({
+			
+		}).on('mouseleave','.signCar .circle',function(){
+			$(this).find('ul.tubiao').first().stop().animate({
 				top:6
 			});
+			
+		})
+
+		$('.header').on('mouseenter','.sec',function(){
+			$(this).find('.bt').css('display','block');
+		}).on('mouseleave','.sec',function(){
+			$(this).find('.bt').css('display','none');
 		})
 
 

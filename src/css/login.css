@@ -57,3 +57,105 @@
   height: 22px;
   color: #D93732;
 }
+
+.main .lg .lg_bt {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.main .lg .lg_bt a {
+  width: 100%;
+  height: 50px;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #D93732;
+}
+
+.main .lg .lg_md {
+  font-size: 14px;
+  color: #333333;
+}
+
+.main .lg .lg_md > a {
+  float: right;
+}
+
+.main .lg .lg_qt .hed {
+  height: 70px;
+  position: relative;
+  font-size: 16px;
+  color: #A599B2;
+  text-align: center;
+  line-height: 70px;
+}
+
+.main .lg .lg_qt .hed i {
+  display: block;
+  width: 130px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(img/login01.png) no-repeat;
+}
+
+.main .lg .lg_qt .hed i:first-child {
+  left: 0;
+}
+
+.main .lg .lg_qt .hed i:last-child {
+  right: 0;
+}
+
+.main .lg .lg_qt ul {
+  margin: 5px auto;
+  width: 315px;
+}
+
+.main .lg .lg_qt ul li {
+  width: 105px;
+  float: left;
+}
+
+.main .lg .lg_qt ul li .mov {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main .lg .lg_qt ul li .mov:hover .bg {
+  top: 0px;
+}
+
+.main .lg .lg_qt ul li .mov a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url(img/login02.png) no-repeat 7px 5px;
+  background-color: #898989;
+}
+
+.main .lg .lg_qt ul li .mov a.bg {
+  position: absolute;
+  top: -35px;
+  margin-bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #D93732;
+  transition: top 0.3s;
+}
+
+.main .lg .lg_qt ul li p {
+  font-size: 14px;
+  color: #898989;
+  text-align: center;
+  height: 22px;
+  line-height: 20px;
+}

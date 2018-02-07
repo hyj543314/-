@@ -12,19 +12,22 @@ require(['config'],function(){
 
 				// 显示大图片
 				var $bigImg = $('.goodsMsg .goodsMsg_m');
+				var $gMsg_r = $('.goodsMsg .goodsMsg_r');
 				$.ajax({
-					url: '../api/detail.php',
+					url: '../api/goods.php',
 					data:`id=${arr_id[arr_id.length-1]}`,
 					success: function(res){
 						res = JSON.parse(res);
-						// console.log(res);
+						console.log(res);
 						// console.log($bigImg.find('img').first())
 						$bigImg.find('img').first().attr({
 							src: `../${res.imgurl}`
 						})
 
 						// 描述，价格等数据更新
-
+						$gMsg_r.find('h1').html(res.name);
+						$gMsg_r.find('p.desp').html(res.description);
+						$gMsg_r.find('.price span.fl').html('￥'+res.price);
 					}
 				})
 
@@ -47,6 +50,8 @@ require(['config'],function(){
 
 				
 				
+				// 导入尾部文件
+				$('.listFooter').load('../html/footer.html');
 				
 
 

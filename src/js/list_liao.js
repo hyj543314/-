@@ -12,12 +12,12 @@ require(['config'],function(){
 
 				// ajax请求数据
 				let pageNo = 1;
-				let qty = 8;
+				let qty = 16;
 				var $mainPag = $('.main .page');
 				$.ajax({
 					type: 'post',
 					data: `pageNo=${pageNo}&qty=${qty}`,
-					url: '../api/page.php',
+					url: '../api/list.php',
 					success: function(res){
 						// 将json字符串转成对象（或数组）
 						res = JSON.parse(res);
@@ -34,7 +34,7 @@ require(['config'],function(){
 					$.ajax({
 						type: 'post',
 						data: `pageNo=${pageNo}&qty=${qty}`,
-						url: '../api/page.php',
+						url: '../api/list.php',
 						success:function(res){
 							res = JSON.parse(res);
 							showGoods(res);
@@ -66,7 +66,7 @@ require(['config'],function(){
 							<a href="detail.html" class="imgA" target="_blank">
 								<img src="../${item.imgurl}">
 							</a>
-							<p class="desp">${item.description}</p>
+							<p class="desp">${item.name}</p>
 							<p class="price">￥ ${item.price}</p>
 							<div class="bot">
 								<a href="detail.html" target="_blank">可定制</a>
@@ -113,7 +113,8 @@ require(['config'],function(){
 				$main_con.on('click','a',function(e){
 					// console.log(e.target,this);
 					let idx = $(this).closest('li').attr('data-guid');
-					this.href = `${this.href}?id=${idx}`;
+					this.href = `detail.html?id=${idx}`;
+					console.log(this.href);
 				})
 
 

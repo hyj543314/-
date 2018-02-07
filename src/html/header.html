@@ -8,8 +8,366 @@
 <link rel="stylesheet" href="../css/header.css">
 <script src="../js/require.js" data-main="../js/header"></script>
 <style>
-	/*@charset "UTF-8";*/
-	
+	@charset "UTF-8";
+	.header {
+	  height: 96px;
+	  /*右侧的搜索框与图表（购物车与登录）*/
+	}
+
+	.header .container {
+	  position: relative;
+	}
+
+	.header .logo {
+	  /*主页的logo部分*/
+	  width: 56px;
+	  height: 56px;
+	  border-radius: 50%;
+	  position: absolute;
+	  left: 0;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  background-color: #D93732;
+	  overflow: hidden;
+	}
+
+	.header .logo .logo_a {
+	  background-color: #D93732;
+	  width: 100px;
+	  position: absolute;
+	  left: 5px;
+	  top: 8px;
+	  padding: 5px 0;
+	}
+
+	.header .logo .logo_a img {
+	  float: left;
+	  margin: 0 3px;
+	  width: 38px;
+	  height: 28px;
+	}
+
+	.header .dh {
+	  /*一级导航条-----*/
+	  padding-left: 70px;
+	  height: 96px;
+	}
+
+	.header .dh > li {
+	  padding: 38px 22px;
+	  float: left;
+	  height: 100%;
+	}
+
+	.header .dh > li a {
+	  font-size: 20px;
+	  color: #333333;
+	}
+
+	.header .dh > li a:hover {
+	  color: #D93732;
+	}
+
+	.header .dh .dhli01 {
+	  width: 134px;
+	}
+
+	.header .dh .dhli01:hover {
+	  background-color: #FFF9AA;
+	  /*hover在第一个li时出现二级导航*/
+	}
+
+	.header .dh .dhli01:hover .erjidh {
+	  display: block;
+	}
+
+	.header .dh .dhli01 .erjidh {
+	  padding-top: 32px;
+	  margin-left: -22px;
+	  width: 134px;
+	  position: relative;
+	  z-index: 1;
+	  display: none;
+	}
+
+	.header .dh .dhli01 .erjidh > li {
+	  border-bottom: 2px solid #E7E7E7;
+	  background-color: #FFF9AA;
+	  width: 100%;
+	}
+
+	.header .dh .dhli01 .erjidh > li > a {
+	  display: block;
+	  height: 46px;
+	  line-height: 46px;
+	  text-align: center;
+	  color: #333333;
+	  font-size: 14px;
+	}
+
+	.header .dh .dhli01 .erjidh > li > a:hover {
+	  color: #D93732;
+	}
+
+	.header .dh .dhli02 div.sldh {
+	  position: absolute;
+	  background: #fff;
+	  z-index: 1;
+	  display: none;
+	  height: 212px;
+	  top: 96px;
+	  padding-top: 46px;
+	}
+
+	.header .dh .dhli02 div.sldh .towho {
+	  height: 30px;
+	  width: 738px;
+	  border-bottom: 1px solid #EDEDED;
+	}
+
+	.header .dh .dhli02 div.sldh p > span {
+	  padding: 0 12px;
+	  display: inline-block;
+	  font-size: 14px;
+	}
+
+	.header .dh .dhli02 div.sldh p > span > a {
+	  display: block;
+	  font-size: 14px;
+	  height: 14px;
+	  line-height: 14px;
+	  color: #333333;
+	}
+
+	.header .dh .dhli02 div.sldh .towhy {
+	  height: 30px;
+	  padding-top: 18px;
+	}
+
+	.header .dh .dhli02 div.sldh i.search {
+	  display: block;
+	  position: absolute;
+	  left: 835px;
+	  top: 152px;
+	}
+
+	.header .dh .dhli02 div.sldh i.search > a {
+	  display: block;
+	  height: 40px;
+	  width: 90px;
+	  line-height: 40px;
+	  font-size: 12px;
+	  text-align: center;
+	  color: #F5F2F2;
+	  background-color: #D93732;
+	  border-radius: 2px;
+	}
+
+	.header .header_r {
+	  width: 480px;
+	  height: 96px;
+	  padding-top: 38px;
+	  padding-left: 72px;
+	  position: relative;
+	}
+
+	.header .header_r .search {
+	  width: 240px;
+	  height: 32px;
+	  border: 2px solid #E7E7E7;
+	  border-radius: 16px;
+	  position: relative;
+	}
+
+	.header .header_r .search input {
+	  border: none;
+	  outline: none;
+	  margin-left: 5px;
+	  padding-left: 15px;
+	  font-size: 12px;
+	  line-height: 22px;
+	}
+
+	.header .header_r .search > a {
+	  display: block;
+	  position: absolute;
+	  right: 12px;
+	  top: 2px;
+	  width: 16px;
+	  height: 23px;
+	  background: url(img/header06.png) no-repeat;
+	}
+
+	.header .header_r .signCar {
+	  width: 100px;
+	}
+
+	.header .header_r .signCar .sec {
+	  position: relative;
+	}
+
+	.header .header_r .signCar .sec .jt {
+	  width: 0;
+	  height: 0;
+	  border: 10px solid transparent;
+	  position: absolute;
+	  right: 30px;
+	}
+
+	.header .header_r .signCar .sec .jt1 {
+	  border-bottom-color: #ccc;
+	  top: -20px;
+	}
+
+	.header .header_r .signCar .sec .jt2 {
+	  border-bottom-color: #fff;
+	  top: -19px;
+	}
+
+	.header .header_r .signCar .circle {
+	  width: 32px;
+	  height: 32px;
+	  border: 2px solid #E7E7E7;
+	  border-radius: 50%;
+	  margin: 0 5px;
+	  position: relative;
+	  overflow: hidden;
+	}
+
+	.header .header_r .signCar .circle:hover {
+	  border-color: #D93732;
+	}
+
+	.header .header_r .signCar .circle .tubiao {
+	  position: absolute;
+	  left: 5px;
+	  top: 6px;
+	}
+
+	.header .header_r .signCar .circle .tubiao a > img {
+	  display: block;
+	}
+
+	.header .header_r .signCar .circle .tubiao > li:last-child {
+	  margin-top: 8px;
+	}
+
+	.header .header_r .signCar .car .carList {
+	  width: 360px;
+	  min-height: 100px;
+	  padding: 30px;
+	  border: 1px solid #E7E7E7;
+	  position: absolute;
+	  right: 0px;
+	  top: 46px;
+	  display: none;
+	  background-color:#fff;
+	  z-index: 1;
+	}
+
+	.header .header_r .signCar .car .carList .jt {
+	  right: 14px;
+	}
+
+	.header .header_r .signCar .car .carList ul li {
+	  height: 80px;
+	  border-bottom: 1px solid #E7E7E7;
+	}
+
+	.header .header_r .signCar .car .carList ul li img {
+	  width: 70px;
+	  height: 70px;
+	  float: left;
+	}
+
+	.header .header_r .signCar .car .carList ul li p {
+	  font-size: 12px;
+	  height: 20px;
+	  line-height: 16px;
+	  color: #333333;
+	}
+
+	.header .header_r .signCar .car .carList ul li .mdl {
+	  padding-top: 8px;
+	}
+
+	.header .header_r .signCar .car .carList ul li .rig p {
+	  text-align: right;
+	}
+
+	.header .header_r .signCar .car .carList ul li .rig a {
+	  color: #333333;
+	}
+
+	.header .header_r .signCar .car .carList .js_box {
+	  padding-top: 20px;
+	}
+
+	.header .header_r .signCar .car .carList .js_box p {
+	  font-size: 12px;
+	  height: 20px;
+	  line-height: 16px;
+	  color: #333333;
+	}
+
+	.header .header_r .signCar .car .carList .js_box p i {
+	  color: #D93732;
+	  font-size: 14px;
+	}
+
+	.header .header_r .signCar .car .carList .js_box a {
+	  float: right;
+	  width: 120px;
+	  height: 34px;
+	  text-align: center;
+	  line-height: 34px;
+	  color: #fff;
+	  background: #D93732;
+	  font-size: 12px;
+	  border-radius: 5px;
+	}
+
+	.header .header_r .signCar .car span.num {
+	  position: absolute;
+	  width: 15px;
+	  height: 15px;
+	  border-radius: 50%;
+	  left: 24px;
+	  top: -4px;
+	  background-color: #D93732;
+	  font-size: 12px;
+	  text-align: center;
+	  line-height: 15px;
+	  color: #fff;
+	  display: none;
+	}
+
+	.header .header_r .signCar .sign {
+	  position: relative;
+	}
+
+	.header .header_r .signCar .sign .dl {
+	  width: 154px;
+	  padding-top: 30px;
+	  border: 1px solid #E7E7E7;
+	  position: absolute;
+	  top: 46px;
+	  left: -90px;
+	  background-color:#fff;
+	  z-index: 1;
+	  display: none;
+	}
+
+	.header .header_r .signCar .sign .dl p {
+	  height: 30px;
+	  text-align: center;
+	  line-height: 16px;
+	}
+
+	.header .header_r .signCar .sign .dl p a {
+	  color: #333333;
+	  font-size: 14px;
+	}
 
 </style>
 <body>
@@ -27,65 +385,65 @@
 					<!-- 二级导航 -->
 					<a href="#" class="zong">礼物分类</a>
 					<ul class="erjidh">
-						<li><a href="#">少女心饰</a></li>
-						<li><a href="#">萌萌美物</a></li>
-						<li><a href="#">为爱停留</a></li>
-						<li><a href="#">潮流时尚</a></li>
-						<li><a href="#">科技达人</a></li>
-						<li><a href="#">幸福烙印</a></li>
-						<li><a href="#">爱情保鲜</a></li>
+						<li><a href="list_liao.html" target="_blank">少女心饰</a></li>
+						<li><a href="list_liao.html" target="_blank">萌萌美物</a></li>
+						<li><a href="list_liao.html" target="_blank">为爱停留</a></li>
+						<li><a href="list_liao.html" target="_blank">潮流时尚</a></li>
+						<li><a href="list_liao.html" target="_blank">科技达人</a></li>
+						<li><a href="list_liao.html" target="_blank">幸福烙印</a></li>
+						<li><a href="list_liao.html" target="_blank">爱情保鲜</a></li>
 					</ul>
 				</li>
 				<li class="dhli02">
-					<a href="#">送礼导航</a>
+					<a href="list_liao.html" target="_blank">送礼导航</a>
 					<!-- 隐藏的二级导航条(送礼导航) -->
 					<div class="sldh">
 						<p class="towho">
 							<span>送给谁:</span>
-							<span><a href="#">不限</a></span>
-							<span><a href="#">公主女票</a></span>
-							<span><a href="#">欧巴男票</a></span>
-							<span><a href="#">潮爸辣妈</a></span>
-							<span><a href="#">兄弟闺蜜</a></span>
-							<span><a href="#">熊孩子</a></span>
-							<span><a href="#">生意伙伴</a></span>
-							<span><a href="#">致谢恩师</a></span>
+							<span><a href="list_liao.html" target="_blank">不限</a></span>
+							<span><a href="list_liao.html" target="_blank">公主女票</a></span>
+							<span><a href="list_liao.html" target="_blank">欧巴男票</a></span>
+							<span><a href="list_liao.html" target="_blank">潮爸辣妈</a></span>
+							<span><a href="list_liao.html" target="_blank">兄弟闺蜜</a></span>
+							<span><a href="list_liao.html" target="_blank">熊孩子</a></span>
+							<span><a href="list_liao.html" target="_blank">生意伙伴</a></span>
+							<span><a href="list_liao.html" target="_blank">致谢恩师</a></span>
 						</p>
 						<p class="towhy">
 							<span>为啥送:</span>
-							<span><a href="#">不限</a></span>
-							<span><a href="#">表白撩妹</a></span>
-							<span><a href="#">过生日</a></span>
-							<span><a href="#">圣诞节</a></span>
-							<span><a href="#">情人节</a></span>
-							<span><a href="#">去求婚</a></span>
-							<span><a href="#">纪念日</a></span>
-							<span><a href="#">想送任性</a></span>
+							<span><a href="list_liao.html" target="_blank">不限</a></span>
+							<span><a href="list_liao.html" target="_blank">表白撩妹</a></span>
+							<span><a href="list_liao.html" target="_blank">过生日</a></span>
+							<span><a href="list_liao.html" target="_blank">圣诞节</a></span>
+							<span><a href="list_liao.html" target="_blank">情人节</a></span>
+							<span><a href="list_liao.html" target="_blank">去求婚</a></span>
+							<span><a href="list_liao.html" target="_blank">纪念日</a></span>
+							<span><a href="list_liao.html" target="_blank">想送任性</a></span>
 						</p>
 						<i class="search">
-							<a href="#">
+							<a href="list_liao.html" target="_blank">
 								搜索
 							</a>
 						</i>
 					</div>
 					
 				</li>
-				<li><a href="#">创意礼物</a></li>
-				<li><a href="#">新品上架</a></li>
-				<li><a href="#">情人节礼物</a></li>
+				<li><a href="list_liao.html" target="_blank">创意礼物</a></li>
+				<li><a href="list_liao.html" target="_blank">新品上架</a></li>
+				<li><a href="list_liao.html" target="_blank">情人节礼物</a></li>
 			</ul>
 			<div class="fr header_r clearfix">
 				<div class="search fl">
 					<input type="text" name="search">
-					<a href="#" class="sou">
+					<a href="list_liao.html" target="_blank" class="sou">
 					</a>
 				</div>
 				<div class="signCar fr">
 					<section class="sign fl sec">
 						<div class="circle">
 							<ul class="tubiao">
-								<li><a href="#"><img src="img/header02.png" alt=""></a></li>
-								<li><a href="#"><img src="img/header04.png" alt=""></a></li>
+								<li><a href="login.html" target="_blank"><img src="img/header02.png" alt=""></a></li>
+								<li><a href="login.html" target="_blank"><img src="img/header04.png" alt=""></a></li>
 							</ul>
 						</div>
 						<div class="dl bt">
@@ -97,7 +455,7 @@
 								<a href="#">浏览历史</a>
 							</p>
 							<p>
-								<a href="#">我的订单</a>
+								<a href="car.html" target="_blank">我的订单</a>
 							</p>
 							<p>
 								<a href="#">我的收藏</a>
@@ -109,8 +467,8 @@
 					<section class="car fl sec">
 						<div class="circle">
 							<ul class="tubiao">
-								<li><a href="#"><img src="img/header.png" alt=""></a></li>
-								<li><a href="#"><img src="img/header05.png" alt=""></a></li>
+								<li><a href="car.html" target="_blank"><img src="img/header.png" alt=""></a></li>
+								<li><a href="car.html" target="_blank"><img src="img/header05.png" alt=""></a></li>
 							</ul>
 						</div>
 						<span class="num">1</span>

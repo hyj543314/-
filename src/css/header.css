@@ -251,6 +251,8 @@
   right: 0px;
   top: 46px;
   display: none;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .header .header_r .signCar .car .carList .jt {
@@ -342,6 +344,8 @@
   top: 46px;
   left: -90px;
   display: none;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .header .header_r .signCar .sign .dl p {

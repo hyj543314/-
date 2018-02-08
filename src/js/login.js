@@ -51,6 +51,9 @@ require(['config'],function(){
 				})
 
 
+
+				$('.logFooter').load('../html/footer.html');
+
 			})
 		})
 	})

@@ -1,5 +1,5 @@
 require(['config'],function(){
-	require(['jquery'],function($){
+	require(['jquery','com'],function($,com){
 		var $header = $('.header');
 		var $logo = $('.header .logo');
 		// logo动画切换
@@ -28,11 +28,37 @@ require(['config'],function(){
 			
 		})
 
+
+		// 隐藏/显示登录框与购物车框
 		$('.header').on('mouseenter','.sec',function(){
 			$(this).find('.bt').css('display','block');
 		}).on('mouseleave','.sec',function(){
 			$(this).find('.bt').css('display','none');
 		})
+
+		// 购物车框默认样式
+		var $car = $('.header .car');
+		var $carList = $('.header .carList');
+		if($car.find('.num').css('display') === 'none'){
+			// console.log(333);
+			// 此时的购物车为空
+			$carList.html('购物车中还没有商品，赶紧抢购吧！')
+		}else{
+			$carList.html(`
+					<ul></ul>
+					<div class="js_box">
+						<div class="fl">
+							<p>共计<i>1</i>件商品</p>
+							<p class="sum">合计：<i>￥218.0</i></p>
+						</div>
+						<a href="car.html">去购物车结算</a>
+					</div>
+					<div class="jt1 jt"></div>
+					<div class="jt2 jt"></div>
+				`);
+
+			
+		}
 
 
 

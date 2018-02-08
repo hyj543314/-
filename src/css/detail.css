@@ -97,6 +97,7 @@
 }
 
 .goodsMsg .container .goodsMsg_r .desp {
+  padding-bottom: 30px;
   border-bottom: 1px solid #F5F5F5;
   font-size: 14px;
   line-height: 20px;
@@ -126,6 +127,11 @@
 
 .goodsMsg .container .goodsMsg_r .sort {
   padding-top: 42px;
+}
+
+.goodsMsg .container .goodsMsg_r .sort .active {
+  color: #D93732;
+  border-color: #D93732;
 }
 
 .goodsMsg .container .goodsMsg_r .sort > p {
@@ -163,19 +169,19 @@
 .goodsMsg .container .goodsMsg_r div.buy > a {
   text-align: center;
   height: 44px;
+  font-size: 14px;
+  line-height: 44px;
 }
 
-.goodsMsg .container .goodsMsg_r div.buy a.tz {
-  width: 400px;
-  font-size: 14px;
+.goodsMsg .container .goodsMsg_r div.buy a.tz, .goodsMsg .container .goodsMsg_r div.buy a.toCar {
+  width: 200px;
   color: #fff;
-  line-height: 44px;
+  margin-right: 10px;
   background-color: #D93732;
 }
 
 .goodsMsg .container .goodsMsg_r div.buy a.collect {
   width: 46px;
-  margin: 0 8px;
   background-color: #E2E2E2;
 }
 

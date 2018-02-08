@@ -94,7 +94,7 @@ $highColor:#D93732;
 
 			}
 			.desp{
-				
+				padding-bottom:30px;
 				border-bottom:1px solid $bgc;
 				font-size:14px;
 				line-height:20px;
@@ -121,6 +121,11 @@ $highColor:#D93732;
 			//样式选择
 			.sort{
 				padding-top:42px;
+				//高亮选择
+				.active{
+					color:$highColor;
+					border-color:$highColor;
+				}
 				>p{
 					height:70px;
 					span,a{
@@ -152,18 +157,18 @@ $highColor:#D93732;
 				>a{
 					text-align:center;
 					height:44px;
-
-				}
-				a.tz{
-					width:400px;
 					font-size:14px;
-					color:#fff;
 					line-height:44px;
+				}
+				a.tz,a.toCar{
+					width:200px;
+					color:#fff;
+					margin-right:10px;
 					background-color:$highColor;
 				}
 				a.collect{
 					width:46px;
-					margin:0 8px;
+					
 					background-color:#E2E2E2;
 				}
 			}

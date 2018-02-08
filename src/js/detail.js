@@ -9,6 +9,7 @@ require(['config'],function(){
 				// 接收页面传参过来的商品的id
 				var arr_id = window.location.search.slice(1).split('=');
 				// console.log(arr_id);
+				// 存放当前商品
 				var currentGood;
 				
 
@@ -26,6 +27,8 @@ require(['config'],function(){
 						$bigImg.find('img').first().attr({
 							src: `../${res.imgurl}`
 						})
+
+						// $bigImg.append(`<img src="../${res.imgurl}" alt="">`);
 
 						// 描述，价格等数据更新
 						$gMsg_r.find('h1').html(res.name);
@@ -73,7 +76,7 @@ require(['config'],function(){
 					$('.header .car').find('.num').css('display','block');
 
 					// $('.header .car').find('.num').text(arr_goods.length);
-					console.log($('.carList>ul'));
+					// console.log($('.carList>ul'));
 
 					for(var i=0;i<arr_goods.length;i++){
 						showCar(arr_goods[i]);
@@ -90,6 +93,8 @@ require(['config'],function(){
 
 				// 添加到购物车
 				var $buy = $gMsg_r.find('.buy');
+				var $carList = $('.header .carList');
+				var $carList_ul = $('.header .carList>ul');
 				
 				$buy.on('click',function(e){
 					var cl = $(e.target).attr('class');
@@ -160,12 +165,34 @@ require(['config'],function(){
 					}
 				})
 
+				// 删除商品
+				$carList_ul.on('click','a.del',function(e){
+					e.preventDefault();
+					var $currentLi = $(this).closest('li');
+					$currentLi.remove();
+					// 把当前商品信息从数组中移除
+					var li_id = $currentLi.attr('data-guid');
+					// console.log(li_id);
+					for(var i=0;i<arr_goods.length;i++){
+						if(arr_goods[i].id === li_id){
+							let res1 = arr_goods.splice(i,1);
+							// console.log(res1);
+							break;
+						}
+					}
+					console.log(arr_goods);
+					// 把数组写进cookie
+					com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
+					// 同时更新价格与数量
+					renew();
+				})
 
 				
 				// 生成购物车商品的函数
 				function showCar(good){
 					// 创建节点
-					var $li = $('<li/>');
+					var $li = $('<li/>').attr('data-guid',good.id);
+					// console.log(good.id);
 					var $carList = $('.header .carList');
 					var $carList_ul = $('.header .carList>ul');
 					$carList_ul.css('display','block');

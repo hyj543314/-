@@ -98,11 +98,11 @@ $highColor:#D93732;
 
 //购物车内容
 .carList{
-	height:326px;
+	
 	background-color:$bgc;
 	.container{
 		.carMain{
-			height:284px;
+			
 			background-color:#fff;
 			.carMain_t{
 				height:70px;
@@ -117,7 +117,7 @@ $highColor:#D93732;
 				}
 			}
 			.carMain_m{
-				height:130px;
+				
 				border-bottom:1px solid $bgc;
 				div.fl{
 					position:relative;
@@ -128,7 +128,7 @@ $highColor:#D93732;
 						width:94px;
 						height:88px;
 						left:36px;
-						top:50%;
+						top:57%;
 						transform:translateY(-50%);
 					}
 					p{

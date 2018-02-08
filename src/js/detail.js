@@ -239,7 +239,8 @@ require(['config'],function(){
 						qty:1,
 						name:currentGood.name,
 						imgurl:currentGood.imgurl,
-						price: currentGood.price
+						price: currentGood.price,
+						total:currentGood.price
 					}
 					// console.log(good);
 					
@@ -250,11 +251,11 @@ require(['config'],function(){
 							// 改变数量
 							arr_goods[i].qty += 1;
 							// 改变价格
-							arr_goods[i].price *= arr_goods[i].qty;
+							arr_goods[i].total *= arr_goods[i].qty;
 							//购物车的数量同步
 							$('.header .carList>ul').find('li').eq(i).find('.rig .qty').text(` X ${arr_goods[i].qty}`);
 							// 价格同步
-							$('.header .carList>ul').find('li').eq(i).find('.rig .price').text(`￥${arr_goods[i].price}`);
+							$('.header .carList>ul').find('li').eq(i).find('.rig .price').text(`￥${arr_goods[i].total}`);
 							break;
 						}
 					}
@@ -305,7 +306,7 @@ require(['config'],function(){
 						</div>
 						<div class="rig fr">
 							<p class="qty">&times;${good.qty}</p>
-							<p class="price">￥${good.price}</p>
+							<p class="price">￥${(good.total*1).toFixed(2)}</p>
 							<p>
 								<a href="#" class="del">删除</a>
 							</p>
@@ -326,7 +327,7 @@ require(['config'],function(){
 						// 商品数量显示
 						span_num += item.qty*1;
 						// 商品总价
-						totalPrice += item.price*1;
+						totalPrice += item.total*1;
 						// console.log(item.qty,span_num);
 					})
 					totalPrice *=1;

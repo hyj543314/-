@@ -80,24 +80,7 @@ require(['config'],function(){
 					}
 					renew();
 
-					// for(var i=0;i<arr_goods.length;i++){
-					// 	$('<li/>').html(`
-					// 				<img src="../${arr_goods[i].imgurl}">
-					// 				<div class="mdl fl">
-					// 					<p class="name">${arr_goods[i].name}</p>
-					// 					<p class="color">礼物颜色：${arr_goods[i].color}</p>
-					// 					<p class="style">礼物款式：${arr_goods[i].style}</p>
-					// 				</div>
-					// 				<div class="rig fr">
-					// 					<p class="qty">&times;${arr_goods[i].qty}</p>
-					// 					<p class="price">￥${arr_goods[i].price}</p>
-					// 					<p>
-					// 						<a href="#" class="del">删除</a>
-					// 					</p>
-					// 				</div>
-					// 				`).appendTo($('.carList>ul'));
-
-					// }
+					
 				}
 				console.log(arr_goods);
 				// console.log(document.cookie);
@@ -164,61 +147,9 @@ require(['config'],function(){
 								// 购物车显示商品
 								showCar(good);
 
-								// // 创建节点
-								// var $li = $('<li/>');
-								// var $carList = $('.header .carList');
-								// var $carList_ul = $('.header .carList>ul');
-								// $carList_ul.css('display','block');
-								// $carList.find('.js_box').css('display','block');
-								// $carList.find('.kong').css('display','none');
-
-								// // console.log($carList_ul);
-								// // console.log($carList);
-								// // 生成数据结构
-								// $li.html(`
-								// 	<img src="../${good.imgurl}">
-								// 	<div class="mdl fl">
-								// 		<p class="name">${good.name}</p>
-								// 		<p class="color">礼物颜色：${good.color}</p>
-								// 		<p class="style">礼物款式：${good.style}</p>
-								// 	</div>
-								// 	<div class="rig fr">
-								// 		<p class="qty">&times;${good.qty}</p>
-								// 		<p class="price">￥${good.price}</p>
-								// 		<p>
-								// 			<a href="#" class="del">删除</a>
-								// 		</p>
-								// 	</div>
-								// 	`).appendTo($carList_ul);
-
 							}
 
 							renew();
-
-							// // 购物车总价格同步
-							// var totalPrice = 0;
-							// // 定义一个变量存放商品数量(不管是否重复)
-							// var span_num = 0;
-
-
-							// // 购物车显示数量
-							// $('.header .car').find('.num').css('display','block');
-							// // if(arr_goods.length>0){
-							// 	arr_goods.forEach(function(item){
-							// 		// 商品数量显示
-							// 		span_num += item.qty*1;
-							// 		// 商品总价
-							// 		totalPrice += item.price*1;
-							// 		// console.log(item.qty,span_num);
-							// 	})
-							// 	$('.header .car').find('.num').text(span_num);
-							// // }
-							// // else{
-							// // 	$('.header .car').find('.num').text(1);
-							// // }
-
-							// $('.js_box').find('.qty').text(span_num);
-							// $('.js_box').find('.tol').text(`￥${totalPrice}`);
 
 							// 添加商品到cookie
 							// document.cookie = 'gwc=' + JSON.stringify(arr_goods);

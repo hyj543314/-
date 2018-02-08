@@ -71,21 +71,21 @@ require(['config'],function(){
 				if(stringGood === ''){
 					var arr_goods = [];
 				}else{
-					// arr_goods = JSON.parse(stringGood);
-					// // 页面刷新更新car数量图标
-					// $('.header .car').find('.num').css('display','block');
+					arr_goods = JSON.parse(stringGood);
+					// 页面刷新更新car数量图标
+					$('.header .car').find('.num').css('display','block');
 
-					// // $('.header .car').find('.num').text(arr_goods.length);
-					// // console.log($('.carList>ul'));
+					// $('.header .car').find('.num').text(arr_goods.length);
+					// console.log($('.carList>ul'));
 
-					// for(var i=0;i<arr_goods.length;i++){
-					// 	showCar(arr_goods[i]);
-					// }
-					// renew();
+					for(var i=0;i<arr_goods.length;i++){
+						showCar(arr_goods[i]);
+					}
+					renew();
 
 					
 				}
-				console.log(arr_goods);
+				// console.log(arr_goods);
 				// console.log(document.cookie);
 
 				// 定义一个变量存放商品数量(不管是否重复)
@@ -95,11 +95,27 @@ require(['config'],function(){
 				var $buy = $gMsg_r.find('.buy');
 				var $carList = $('.header .carList');
 				var $carList_ul = $('.header .carList>ul');
+				// console.log($('.header .car').find('.num').text());
+
+				// 购物车清空时改变样式
+				if($('.header .car').find('.num').text() ==0){
+					$('.header .car').find('.num').css('display','none');
+				}
 				
+
+				var $goodsP = $goodsSort.find('p');
 				$buy.on('click',function(e){
-					var cl = $(e.target).attr('class');
-					var $goodsP = $goodsSort.find('p');
-					console.log(cl);
+					// var cl = $(e.target).attr('class');
+					// var $goodsP = $goodsSort.find('p');
+					// console.log($goodsP);
+					var sels = 0;
+					for(var i=0;i<3;i++){
+						if($goodsP.eq(i).find('a').hasClass('active')){
+							sels++;
+						}
+					}
+					
+
 					if($(e.target).hasClass('toCar')){
 						e.preventDefault();
 						if(!$goodsP.eq(0).find('a').hasClass('active')){
@@ -110,82 +126,160 @@ require(['config'],function(){
 						else if(!$goodsP.eq(2).find('a').hasClass('active')){
 							alert('请选择个性定制')
 						}
-						if($goodsP.eq(0).find('a').hasClass('active') && $goodsP.eq(1).find('a').hasClass('active') && $goodsP.eq(2).find('a').hasClass('active')){
-							// console.log('last');
+						if(sels === 3){
+							putCook();
 							
-							let good = {
-								id: arr_id[arr_id.length-1],
-								color: $goodsP.eq(0).find('.active').text(),
-								style:$goodsP.eq(1).find('.active').text(),
-								made: $goodsP.eq(2).find('.active').text(),
-								qty:1,
-								name:currentGood.name,
-								imgurl:currentGood.imgurl,
-								price: currentGood.price
-							}
-							// console.log(good);
+							// let good = {
+							// 	id: arr_id[arr_id.length-1],
+							// 	color: $goodsP.eq(0).find('.active').text(),
+							// 	style:$goodsP.eq(1).find('.active').text(),
+							// 	made: $goodsP.eq(2).find('.active').text(),
+							// 	qty:1,
+							// 	name:currentGood.name,
+							// 	imgurl:currentGood.imgurl,
+							// 	price: currentGood.price
+							// }
+							// // console.log(good);
 							
 
-							// 判断当前商品是否已存在cookie中
-							for(var i=0;i<arr_goods.length;i++){
-								if(arr_goods[i].id === arr_id[arr_id.length-1]){
-									// 改变数量
-									arr_goods[i].qty += 1;
-									// 改变价格
-									arr_goods[i].price *= arr_goods[i].qty;
-									//购物车的数量同步
-									$('.header .carList>ul').find('li').eq(i).find('.rig .qty').text(` X ${arr_goods[i].qty}`);
-									// 价格同步
-									$('.header .carList>ul').find('li').eq(i).find('.rig .price').text(`￥${arr_goods[i].price}`);
-									break;
-								}
-							}
-							// console.log($car.find('.num'));
+							// // 判断当前商品是否已存在cookie中
+							// for(var i=0;i<arr_goods.length;i++){
+							// 	if(arr_goods[i].id === arr_id[arr_id.length-1]){
+							// 		// 改变数量
+							// 		arr_goods[i].qty += 1;
+							// 		// 改变价格
+							// 		arr_goods[i].price *= arr_goods[i].qty;
+							// 		//购物车的数量同步
+							// 		$('.header .carList>ul').find('li').eq(i).find('.rig .qty').text(` X ${arr_goods[i].qty}`);
+							// 		// 价格同步
+							// 		$('.header .carList>ul').find('li').eq(i).find('.rig .price').text(`￥${arr_goods[i].price}`);
+							// 		break;
+							// 	}
+							// }
+							// // console.log($car.find('.num'));
 
 
-							if(i === arr_goods.length){
-								arr_goods.push(good);
+							// if(i === arr_goods.length){
+							// 	arr_goods.push(good);
 								
 								
-								$('.header .car').find('.num').text(arr_goods.length);
+							// 	$('.header .car').find('.num').text(arr_goods.length);
 
-								// 购物车显示商品
-								showCar(good);
+							// 	// 购物车显示商品
+							// 	showCar(good);
 
-							}
+							// }
 
-							renew();
+							// renew();
 
-							// 添加商品到cookie
-							// document.cookie = 'gwc=' + JSON.stringify(arr_goods);
-							com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
-							console.log(document.cookie,typeof(document.cookie));
+							// // 添加商品到cookie
+							// // document.cookie = 'gwc=' + JSON.stringify(arr_goods);
+							// com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
+							// // console.log(document.cookie,typeof(document.cookie));
+
 						}
 			
 					}
+					// 跳转到购物车
+					else if($(e.target).hasClass('tz')){
+						// console.log(666);
+						// 没选择样式不能跳转
+						if(sels !==3){
+							e.preventDefault();
+							alert('请选择样式!');
+						}else{
+							putCook();
+
+						}
+					}
+
+
+
 				})
 
-				// // 删除商品
-				// $carList_ul.on('click','a.del',function(e){
-				// 	e.preventDefault();
-				// 	var $currentLi = $(this).closest('li');
-				// 	$currentLi.remove();
-				// 	// 把当前商品信息从数组中移除
-				// 	var li_id = $currentLi.attr('data-guid');
-				// 	// console.log(li_id);
-				// 	for(var i=0;i<arr_goods.length;i++){
-				// 		if(arr_goods[i].id === li_id){
-				// 			let res1 = arr_goods.splice(i,1);
-				// 			// console.log(res1);
-				// 			break;
-				// 		}
-				// 	}
-				// 	console.log(arr_goods);
-				// 	// 把数组写进cookie
-				// 	com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
-				// 	// 同时更新价格与数量
-				// 	renew();
-				// })
+				// 删除商品
+				$carList_ul.on('click','a.del',function(e){
+					e.preventDefault();
+					var $currentLi = $(this).closest('li');
+					$currentLi.remove();
+					// 把当前商品信息从数组中移除
+					var li_id = $currentLi.attr('data-guid');
+					// console.log(li_id);
+					for(var i=0;i<arr_goods.length;i++){
+						if(arr_goods[i].id === li_id){
+							let res1 = arr_goods.splice(i,1);
+							// console.log(res1);
+							break;
+						}
+					}
+					console.log(arr_goods);
+					// 把数组写进cookie
+					com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
+					if(arr_goods.length === 0){
+						var $carList = $('.header .carList');
+						var $carList_ul = $('.header .carList>ul');
+						$carList_ul.css('display','none');
+						$carList.find('.js_box').css('display','none');
+						$carList.find('.kong').css('display','block');
+						$('.header .car').find('.num').css('display','none');
+					}else{
+						// 同时更新价格与数量
+						renew();
+					}
+					
+				})
+
+				// 商品存进cookie的函数
+				function putCook(){
+					let good = {
+						id: arr_id[arr_id.length-1],
+						color: $goodsP.eq(0).find('.active').text(),
+						style:$goodsP.eq(1).find('.active').text(),
+						made: $goodsP.eq(2).find('.active').text(),
+						qty:1,
+						name:currentGood.name,
+						imgurl:currentGood.imgurl,
+						price: currentGood.price
+					}
+					// console.log(good);
+					
+
+					// 判断当前商品是否已存在cookie中
+					for(var i=0;i<arr_goods.length;i++){
+						if(arr_goods[i].id === arr_id[arr_id.length-1]){
+							// 改变数量
+							arr_goods[i].qty += 1;
+							// 改变价格
+							arr_goods[i].price *= arr_goods[i].qty;
+							//购物车的数量同步
+							$('.header .carList>ul').find('li').eq(i).find('.rig .qty').text(` X ${arr_goods[i].qty}`);
+							// 价格同步
+							$('.header .carList>ul').find('li').eq(i).find('.rig .price').text(`￥${arr_goods[i].price}`);
+							break;
+						}
+					}
+					// console.log($car.find('.num'));
+
+
+					if(i === arr_goods.length){
+						arr_goods.push(good);
+						
+						
+						$('.header .car').find('.num').text(arr_goods.length);
+
+						// 购物车显示商品
+						showCar(good);
+
+					}
+
+					renew();
+
+					// 添加商品到cookie
+					// document.cookie = 'gwc=' + JSON.stringify(arr_goods);
+					com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
+					// console.log(document.cookie,typeof(document.cookie));
+					
+				}
 
 				
 				// 生成购物车商品的函数

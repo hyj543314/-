@@ -252,10 +252,15 @@ $color:#333333;
 					background-color:#fff;
 					z-index:1;
 					//无商品时的默认样式
-					font-size:14px;
-					line-height:100px;
-					text-align:center;
-					color:$color;
+					.kong{
+						font-size:14px;
+						line-height:100px;
+						text-align:center;
+						color:$color;
+						width:100%;
+						height:100px;
+						background-color:#fff;
+					}
 					.jt{
 						right:14px;
 					}

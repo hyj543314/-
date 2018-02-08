@@ -253,10 +253,16 @@
   display: none;
   background-color: #fff;
   z-index: 1;
+}
+
+.header .header_r .signCar .car .carList .kong {
   font-size: 14px;
   line-height: 100px;
   text-align: center;
   color: #333333;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
 }
 
 .header .header_r .signCar .car .carList .jt {

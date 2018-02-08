@@ -42,22 +42,17 @@ require(['config'],function(){
 		if($car.find('.num').css('display') === 'none'){
 			// console.log(333);
 			// 此时的购物车为空
-			$carList.html('购物车中还没有商品，赶紧抢购吧！')
+			// $carList.html('购物车中还没有商品，赶紧抢购吧！')
+			$carList.find('ul').css('display','none');
+			$carList.find('.js_box').css('display','none');
 		}else{
-			$carList.html(`
-					<ul></ul>
-					<div class="js_box">
-						<div class="fl">
-							<p>共计<i>1</i>件商品</p>
-							<p class="sum">合计：<i>￥218.0</i></p>
-						</div>
-						<a href="car.html">去购物车结算</a>
-					</div>
-					<div class="jt1 jt"></div>
-					<div class="jt2 jt"></div>
-				`);
+			$carList.find('ul').css('display','block');
+			$carList.find('.js_box').css('display','block');
+			$carList.find('.kong').css('display','none');
 
 			
+
+
 		}
 
 

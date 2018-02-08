@@ -71,8 +71,15 @@ require(['config'],function(){
 					arr_goods = JSON.parse(stringGood);
 					// 页面刷新更新car数量图标
 					$('.header .car').find('.num').css('display','block');
-					$('.header .car').find('.num').text(arr_goods.length);
+
+					// $('.header .car').find('.num').text(arr_goods.length);
 					console.log($('.carList>ul'));
+
+					for(var i=0;i<arr_goods.length;i++){
+						showCar(arr_goods[i]);
+					}
+					renew();
+
 					// for(var i=0;i<arr_goods.length;i++){
 					// 	$('<li/>').html(`
 					// 				<img src="../${arr_goods[i].imgurl}">
@@ -95,6 +102,8 @@ require(['config'],function(){
 				console.log(arr_goods);
 				// console.log(document.cookie);
 
+				// 定义一个变量存放商品数量(不管是否重复)
+				// var span_num = 0;
 
 				// 添加到购物车
 				var $buy = $gMsg_r.find('.buy');
@@ -121,48 +130,96 @@ require(['config'],function(){
 								color: $goodsP.eq(0).find('.active').text(),
 								style:$goodsP.eq(1).find('.active').text(),
 								made: $goodsP.eq(2).find('.active').text(),
-								qty:1
+								qty:1,
+								name:currentGood.name,
+								imgurl:currentGood.imgurl,
+								price: currentGood.price
 							}
-							console.log(good);
+							// console.log(good);
+							
+
 							// 判断当前商品是否已存在cookie中
 							for(var i=0;i<arr_goods.length;i++){
 								if(arr_goods[i].id === arr_id[arr_id.length-1]){
 									// 改变数量
 									arr_goods[i].qty += 1;
+									// 改变价格
+									arr_goods[i].price *= arr_goods[i].qty;
+									//购物车的数量同步
+									$('.header .carList>ul').find('li').eq(i).find('.rig .qty').text(` X ${arr_goods[i].qty}`);
+									// 价格同步
+									$('.header .carList>ul').find('li').eq(i).find('.rig .price').text(`￥${arr_goods[i].price}`);
 									break;
 								}
 							}
 							// console.log($car.find('.num'));
 
+
 							if(i === arr_goods.length){
 								arr_goods.push(good);
-								// 购物车显示数量
-								$('.header .car').find('.num').css('display','block');
+								
+								
 								$('.header .car').find('.num').text(arr_goods.length);
 
 								// 购物车显示商品
+								showCar(good);
 
-								// 创建节点
-								var $li = $('<li/>');
-								var $carList_ul = $('.header .carList>ul');
-								console.log($carList_ul);
-								$li.html(`
-									<img src="../${currentGood.imgurl}">
-									<div class="mdl fl">
-										<p class="name">${currentGood.name}</p>
-										<p class="color">礼物颜色：${good.color}</p>
-										<p class="style">礼物款式：${good.style}</p>
-									</div>
-									<div class="rig fr">
-										<p class="qty">&times;${good.qty}</p>
-										<p class="price">￥${currentGood.price}</p>
-										<p>
-											<a href="#" class="del">删除</a>
-										</p>
-									</div>
-									`).appendTo($carList_ul);
+								// // 创建节点
+								// var $li = $('<li/>');
+								// var $carList = $('.header .carList');
+								// var $carList_ul = $('.header .carList>ul');
+								// $carList_ul.css('display','block');
+								// $carList.find('.js_box').css('display','block');
+								// $carList.find('.kong').css('display','none');
+
+								// // console.log($carList_ul);
+								// // console.log($carList);
+								// // 生成数据结构
+								// $li.html(`
+								// 	<img src="../${good.imgurl}">
+								// 	<div class="mdl fl">
+								// 		<p class="name">${good.name}</p>
+								// 		<p class="color">礼物颜色：${good.color}</p>
+								// 		<p class="style">礼物款式：${good.style}</p>
+								// 	</div>
+								// 	<div class="rig fr">
+								// 		<p class="qty">&times;${good.qty}</p>
+								// 		<p class="price">￥${good.price}</p>
+								// 		<p>
+								// 			<a href="#" class="del">删除</a>
+								// 		</p>
+								// 	</div>
+								// 	`).appendTo($carList_ul);
 
 							}
+
+							renew();
+
+							// // 购物车总价格同步
+							// var totalPrice = 0;
+							// // 定义一个变量存放商品数量(不管是否重复)
+							// var span_num = 0;
+
+
+							// // 购物车显示数量
+							// $('.header .car').find('.num').css('display','block');
+							// // if(arr_goods.length>0){
+							// 	arr_goods.forEach(function(item){
+							// 		// 商品数量显示
+							// 		span_num += item.qty*1;
+							// 		// 商品总价
+							// 		totalPrice += item.price*1;
+							// 		// console.log(item.qty,span_num);
+							// 	})
+							// 	$('.header .car').find('.num').text(span_num);
+							// // }
+							// // else{
+							// // 	$('.header .car').find('.num').text(1);
+							// // }
+
+							// $('.js_box').find('.qty').text(span_num);
+							// $('.js_box').find('.tol').text(`￥${totalPrice}`);
+
 							// 添加商品到cookie
 							// document.cookie = 'gwc=' + JSON.stringify(arr_goods);
 							com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
@@ -174,6 +231,57 @@ require(['config'],function(){
 
 
 				
+				// 生成购物车商品的函数
+				function showCar(good){
+					// 创建节点
+					var $li = $('<li/>');
+					var $carList = $('.header .carList');
+					var $carList_ul = $('.header .carList>ul');
+					$carList_ul.css('display','block');
+					$carList.find('.js_box').css('display','block');
+					$carList.find('.kong').css('display','none');
+
+					// console.log($carList_ul);
+					// console.log($carList);
+					// 生成数据结构
+					$li.html(`
+						<img src="../${good.imgurl}">
+						<div class="mdl fl">
+							<p class="name">${good.name}</p>
+							<p class="color">礼物颜色：${good.color}</p>
+							<p class="style">礼物款式：${good.style}</p>
+						</div>
+						<div class="rig fr">
+							<p class="qty">&times;${good.qty}</p>
+							<p class="price">￥${good.price}</p>
+							<p>
+								<a href="#" class="del">删除</a>
+							</p>
+						</div>
+						`).appendTo($carList_ul);
+
+				}
+
+				// 购物车价格，数量等更新
+				function renew(){
+					// 购物车总价格同步
+					var totalPrice = 0;
+					// 定义一个变量存放商品数量(不管是否重复)
+					var span_num = 0;
+					// 购物车显示数量
+					$('.header .car').find('.num').css('display','block');
+					arr_goods.forEach(function(item){
+						// 商品数量显示
+						span_num += item.qty*1;
+						// 商品总价
+						totalPrice += item.price*1;
+						// console.log(item.qty,span_num);
+					})
+					$('.header .car').find('.num').text(span_num);
+					$('.js_box').find('.qty').text(span_num);
+					$('.js_box').find('.tol').text(`￥${totalPrice}`);
+
+				}
 				
 				// 导入尾部文件
 				$('.listFooter').load('../html/footer.html');

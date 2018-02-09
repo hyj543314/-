@@ -23,5 +23,7 @@
 		}else{
 			echo "fail";
 		}
+	}else{
+		echo 'no';
 	}
 ?>

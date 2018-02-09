@@ -251,7 +251,9 @@ require(['config'],function(){
 							// 改变数量
 							arr_goods[i].qty += 1;
 							// 改变价格
-							arr_goods[i].total *= arr_goods[i].qty;
+							arr_goods[i].total = arr_goods[i].price * arr_goods[i].qty;
+							arr_goods[i].total = (arr_goods[i].total*1).toFixed(2);
+							console.log(arr_goods[i].total);
 							//购物车的数量同步
 							$('.header .carList>ul').find('li').eq(i).find('.rig .qty').text(` X ${arr_goods[i].qty}`);
 							// 价格同步

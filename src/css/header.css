@@ -368,3 +368,9 @@
   color: #333333;
   font-size: 14px;
 }
+
+.header .header_r .signCar .sign .dl p a.user {
+  color: orange;
+  font-size: 12px;
+  text-align: center;
+}

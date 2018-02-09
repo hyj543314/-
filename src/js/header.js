@@ -147,6 +147,13 @@ require(['config'],function(){
 
 		}
 
+		// 获取用户名
+		var phone = com.Cookie.get('user');
+		console.log(phone);
+		if(phone){
+			$('.header_r .dl>p').first().html(`<a href="#" class="user">${phone}</a>`)
+		}
+
 
 
 

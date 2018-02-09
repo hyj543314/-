@@ -20,14 +20,7 @@ require(['config'],function(){
 					}
 				})
 
-				// 判断密码是否合法
-				// $('#password').on('change',function(){
-				// 	var password = $(this).attr('value');
-				// 	if(!/^[^\s]{6,20}$/.test(password)){
-						
-				// 		$(this).next().text('密码不合法');
-				// 	}
-				// })
+				
 				var password;
 				$('#password').on('change',function(){
 					password = this.value;
@@ -36,14 +29,22 @@ require(['config'],function(){
 
 				// 提交表单
 				$('.lg_bt .dl').on('click',function(e){
-					e.preventDefault();
+					// e.preventDefault();
+					var thiss = this;
 					$.ajax({
 						url: `../api/login.php`,
 						data: `phone=${phone}&password=${password}`,
 						success: function(res){
-							// console.log(res,typeof(res));
+							console.log(res,typeof(res));
 							if(res === 'success'){
 								alert('登录成功');
+								$('.lg_bt .dl').off('click');
+								$(thiss).attr({
+									href:'../index.html',
+									target: '_blank'
+								})
+								console.log(thiss);
+
 
 								var now = new Date();
 
@@ -59,11 +60,24 @@ require(['config'],function(){
 									com.Cookie.set('user',phone,{path:'/'});
 								}
 
+							}else if(res === 'fail'){
+								e.preventDefault();
+								alert('用户不存在或密码错误');
 							}
 						}
 
 					})
+					return false;
 				})
+
+
+
+
+				// 自动登录函数
+				function autoLogin(){
+					var pho= com.Cookie.get('user');
+
+				}
 
 
 

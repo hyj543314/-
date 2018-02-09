@@ -58,7 +58,6 @@ require(['config'],function(){
 
 				// 注册
 				$('.rg_bt').on('click','a',function(e){
-					e.preventDefault();
 					num = it1 + it2 + it3;
 					if(num !== 3){
 						e.preventDefault();

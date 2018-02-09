@@ -15,7 +15,7 @@ require(['config'],function(){
 						
 						$(this).next().text('手机输入不正确');
 					}else{
-						console.log(111);
+						// console.log(111);
 						$(this).next().text('');
 					}
 				})
@@ -31,7 +31,7 @@ require(['config'],function(){
 				var password;
 				$('#password').on('change',function(){
 					password = this.value;
-					console.log(password);
+					// console.log(password);
 				})
 
 				// 提交表单
@@ -41,9 +41,24 @@ require(['config'],function(){
 						url: `../api/login.php`,
 						data: `phone=${phone}&password=${password}`,
 						success: function(res){
-							console.log(res,typeof(res));
+							// console.log(res,typeof(res));
 							if(res === 'success'){
 								alert('登录成功');
+
+								var now = new Date();
+
+								// 设置时间为30天后
+								now.setDate(now.getDate()+30);
+
+								// 把信息存进cookie
+								console.log($('[name=mdl]')[0].checked);
+
+								if($('[name=mdl]')[0].checked){
+									com.Cookie.set('user',phone,{expires:now,path:'/'})
+								}else{
+									com.Cookie.set('user',phone,{path:'/'});
+								}
+
 							}
 						}
 

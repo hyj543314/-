@@ -81,7 +81,11 @@ require(['config'],function(){
 			var clName = $(e.target).attr('class');
 			// console.log(clName);
 			if(clName === 'reduce'){
-				console.log('reduce');
+				// console.log('reduce');
+
+				// 禁止输入框输入
+				$(e.target).parent().find('[name=qty]').attr('disabled','disabled');
+
 				// 当前li所在兄弟中的位置
 				var lix = $(e.target).closest('li').index();
 				var idx = $(e.target).closest('li').attr('data-guid');
@@ -92,6 +96,8 @@ require(['config'],function(){
 				inp_qty--;
 				if(inp_qty<=1){
 					// console.log(444);
+
+
 					$(e.target).parent().find('[name=qty]').attr('value','1');
 					single(lix,idx,1);
 					reAll();
@@ -105,6 +111,8 @@ require(['config'],function(){
 			}else if(clName === 'add'){
 				console.log('add');
 
+				$(e.target).parent().find('[name=qty]').attr('disabled','disabled');
+
 				var lix = $(e.target).closest('li').index();
 
 				var idx = $(e.target).closest('li').attr('data-guid');
@@ -112,11 +120,15 @@ require(['config'],function(){
 				var inp_qty = $(e.target).parent().find('[name=qty]').attr('value');
 				inp_qty++;
 				$(e.target).parent().find('[name=qty]').attr('value',inp_qty);
+				
 				single(lix,idx,inp_qty);
 				reAll();
 
 			}else if(clName === 'del'){
 				console.log('del');
+
+
+
 				$(e.target).closest('li').remove();
 
 				var idx = $(e.target).closest('li').attr('data-guid');
@@ -133,7 +145,34 @@ require(['config'],function(){
 					creatLi(arr_goods[j]);
 				}
 				reAll();
+			}else if($(e.target).attr('name') === 'qty'){
+				// console.log('input');
+				// 取消禁用
+				$(e.target).removeAttr('disabled');
+				// 并自动获取焦点
+				$(e.target)[0].focus();
 			}
+
+		})
+
+
+		// 给输入框绑定事件
+		$goods_ul.on('change','input',function(){
+			console.log('change');
+
+			// 获取当前的li所在兄弟中的位置
+			var lix = $(this).closest('li').index();
+
+			// 获取当前li的data-guid属性值
+			var idx = $(this).closest('li').attr('data-guid');
+
+			// 获取输入框的值
+			var inp_qty = this.value;
+
+			// 更新数据
+			single(lix,idx,inp_qty);
+			reAll();
+
 		})
 
 
@@ -149,7 +188,7 @@ require(['config'],function(){
 					arr_goods[i].total = tol;
 					arr_goods[i].qty = val;
 
-					console.log(arr_goods[i].price,val);
+					// console.log(arr_goods[i].price,val);
 
 					// 页面显示价格
 					$currentLi.find('.sum').text(`￥${tol}`);

@@ -40,11 +40,12 @@ require(['config'],function(){
 		var $car = $('.header .car');
 		var $carList = $('.header .carList');
 		if($car.find('.num').css('display') === 'none'){
-			// console.log(333);
+			console.log(333);
 			// 此时的购物车为空
 			// $carList.html('购物车中还没有商品，赶紧抢购吧！')
 			$carList.find('ul').css('display','none');
 			$carList.find('.js_box').css('display','none');
+			$carList.find('.kong').css('display','block');
 		}else{
 			$carList.find('ul').css('display','block');
 			$carList.find('.js_box').css('display','block');
@@ -55,41 +56,49 @@ require(['config'],function(){
 
 		
 
-		// // 页面刷新获取cookie值（此时已有cookie，不需要判断）
-		// var stringGood = com.Cookie.get('gwc');
-		// var arr_goods = JSON.parse(stringGood);
-		// console.log(arr_goods);
+		// 页面刷新获取cookie值
+		var stringGood = com.Cookie.get('gwc');
+		// 判断cookie中是否有商品信息
+		if(!stringGood){
+			arr_goods=[];
+		}else{
+			arr_goods = JSON.parse(stringGood);
 
-		// // 页面刷新更新car数量图标
-		// $('.header .car').find('.num').css('display','block');
+			// 页面刷新更新car数量图标
+			$('.header .car').find('.num').css('display','block');
 
-		// for(var i=0;i<arr_goods.length;i++){
-		// 	showCar(arr_goods[i]);
-		// }
-		// renew();
+			for(var i=0;i<arr_goods.length;i++){
+				showCar(arr_goods[i]);
+			}
+			renew();
+		}
+		
+		console.log(arr_goods);
 
-		// // 删除商品
-		// var $carList_ul = $('.header .carList>ul');
-		// $carList_ul.on('click','a.del',function(e){
-		// 	e.preventDefault();
-		// 	var $currentLi = $(this).closest('li');
-		// 	$currentLi.remove();
-		// 	// 把当前商品信息从数组中移除
-		// 	var li_id = $currentLi.attr('data-guid');
-		// 	// console.log(li_id);
-		// 	for(var i=0;i<arr_goods.length;i++){
-		// 		if(arr_goods[i].id === li_id){
-		// 			let res1 = arr_goods.splice(i,1);
-		// 			// console.log(res1);
-		// 			break;
-		// 		}
-		// 	}
-		// 	console.log(arr_goods);
-		// 	// 把数组写进cookie
-		// 	com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
-		// 	// 同时更新价格与数量
-		// 	renew();
-		// })
+		
+
+		// 删除商品
+		var $carList_ul = $('.header .carList>ul');
+		$carList_ul.on('click','a.del',function(e){
+			e.preventDefault();
+			var $currentLi = $(this).closest('li');
+			$currentLi.remove();
+			// 把当前商品信息从数组中移除
+			var li_id = $currentLi.attr('data-guid');
+			// console.log(li_id);
+			for(var i=0;i<arr_goods.length;i++){
+				if(arr_goods[i].id === li_id){
+					let res1 = arr_goods.splice(i,1);
+					// console.log(res1);
+					break;
+				}
+			}
+			console.log(arr_goods);
+			// 把数组写进cookie
+			com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
+			// 同时更新价格与数量
+			renew();
+		})
 
 
 

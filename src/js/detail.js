@@ -11,7 +11,6 @@ require(['config'],function(){
 				// console.log(arr_id);
 				// 存放当前商品
 				var currentGood;
-				
 
 				// 显示大图片
 				var $bigImg = $('.goodsMsg .goodsMsg_m');
@@ -73,15 +72,15 @@ require(['config'],function(){
 				}else{
 					arr_goods = JSON.parse(stringGood);
 					// 页面刷新更新car数量图标
-					$('.header .car').find('.num').css('display','block');
+					// $('.header .car').find('.num').css('display','block');
 
-					// $('.header .car').find('.num').text(arr_goods.length);
-					// console.log($('.carList>ul'));
+					// // $('.header .car').find('.num').text(arr_goods.length);
+					// // console.log($('.carList>ul'));
 
-					for(var i=0;i<arr_goods.length;i++){
-						showCar(arr_goods[i]);
-					}
-					renew();
+					// for(var i=0;i<arr_goods.length;i++){
+					// 	showCar(arr_goods[i]);
+					// }
+					// renew();
 
 					
 				}
@@ -197,37 +196,38 @@ require(['config'],function(){
 
 				})
 
-				// 删除商品
-				$carList_ul.on('click','a.del',function(e){
-					e.preventDefault();
-					var $currentLi = $(this).closest('li');
-					$currentLi.remove();
-					// 把当前商品信息从数组中移除
-					var li_id = $currentLi.attr('data-guid');
-					// console.log(li_id);
-					for(var i=0;i<arr_goods.length;i++){
-						if(arr_goods[i].id === li_id){
-							let res1 = arr_goods.splice(i,1);
-							// console.log(res1);
-							break;
-						}
-					}
-					console.log(arr_goods);
-					// 把数组写进cookie
-					com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
-					if(arr_goods.length === 0){
-						var $carList = $('.header .carList');
-						var $carList_ul = $('.header .carList>ul');
-						$carList_ul.css('display','none');
-						$carList.find('.js_box').css('display','none');
-						$carList.find('.kong').css('display','block');
-						$('.header .car').find('.num').css('display','none');
-					}else{
-						// 同时更新价格与数量
-						renew();
-					}
+				// // 删除商品
+				// $carList_ul.on('click','a.del',function(e){
+				// 	e.preventDefault();
+				// 	var $currentLi = $(this).closest('li');
+				// 	$currentLi.remove();
+				// 	// 把当前商品信息从数组中移除
+				// 	var li_id = $currentLi.attr('data-guid');
+				// 	// console.log(li_id);
+				// 	for(var i=0;i<arr_goods.length;i++){
+				// 		if(arr_goods[i].id === li_id){
+				// 			let res1 = arr_goods.splice(i,1);
+				// 			// console.log(res1);
+				// 			break;
+				// 		}
+				// 	}
+				// 	console.log(arr_goods);
+				// 	// 把数组写进cookie
+				// 	com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
+				// 	if(arr_goods.length === 0){
+				// 		var $carList = $('.header .carList');
+				// 		var $carList_ul = $('.header .carList>ul');
+				// 		$carList_ul.css('display','none');
+				// 		$carList.find('.js_box').css('display','none');
+				// 		$carList.find('.kong').css('display','block');
+				// 		$('.header .car').find('.num').css('display','none');
+				// 	}else{
+				// 		// 同时更新价格与数量
+				// 		renew();
+				// 	}
 					
-				})
+				// })
+				
 
 				// 商品存进cookie的函数
 				function putCook(){

@@ -36,7 +36,7 @@ require(['config'],function(){
 				<div class="fr">
 					<span class="price">￥${good.price}</span>
 					<span class="qty">
-						<input type="number" name="qty" value="${good.qty}">
+						<input type="text" name="qty" value="${good.qty}">
 						<a href="#" class="add"></a>
 						<a href="#" class="reduce"></a>
 					</span>
@@ -79,30 +79,36 @@ require(['config'],function(){
 			// console.log(this);
 
 			var clName = $(e.target).attr('class');
+
+			// 当前li所在兄弟中的位置
+			var lix = $(e.target).closest('li').index();
+			var idx = $(e.target).closest('li').attr('data-guid');
+			var $input = $(e.target).parent().find('[name=qty]');
+
 			// console.log(clName);
 			if(clName === 'reduce'){
 				// console.log('reduce');
 
 				// 禁止输入框输入
-				$(e.target).parent().find('[name=qty]').attr('disabled','disabled');
+				$input.attr('disabled','disabled');
 
 				// 当前li所在兄弟中的位置
-				var lix = $(e.target).closest('li').index();
-				var idx = $(e.target).closest('li').attr('data-guid');
+				// var lix = $(e.target).closest('li').index();
+				// var idx = $(e.target).closest('li').attr('data-guid');
 
 				// console.log('idx:',idx);
-				var inp_qty = $(e.target).parent().find('[name=qty]').attr('value');
+				var inp_qty = $input.attr('value');
 				// console.log(inp_qty);
 				inp_qty--;
 				if(inp_qty<=1){
 					// console.log(444);
 
 
-					$(e.target).parent().find('[name=qty]').attr('value','1');
+					$input.attr('value','1');
 					single(lix,idx,1);
 					reAll();
 				}else{
-					$(e.target).parent().find('[name=qty]').attr('value',inp_qty);
+					$input.attr('value',inp_qty);
 					single(lix,idx,inp_qty);
 					reAll();
 				}
@@ -111,15 +117,15 @@ require(['config'],function(){
 			}else if(clName === 'add'){
 				console.log('add');
 
-				$(e.target).parent().find('[name=qty]').attr('disabled','disabled');
+				$input.attr('disabled','disabled');
 
-				var lix = $(e.target).closest('li').index();
+				// var lix = $(e.target).closest('li').index();
 
-				var idx = $(e.target).closest('li').attr('data-guid');
+				// var idx = $(e.target).closest('li').attr('data-guid');
 
-				var inp_qty = $(e.target).parent().find('[name=qty]').attr('value');
+				var inp_qty = $input.attr('value');
 				inp_qty++;
-				$(e.target).parent().find('[name=qty]').attr('value',inp_qty);
+				$input.attr('value',inp_qty);
 				
 				single(lix,idx,inp_qty);
 				reAll();
@@ -137,6 +143,9 @@ require(['config'],function(){
 						var re = arr_goods.splice(i,1);
 						console.log('re',re);
 						console.log(arr_goods);
+
+						// cookie更新
+						com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
 						break;
 					}
 				}
@@ -144,7 +153,11 @@ require(['config'],function(){
 				for(var j=0;j<arr_goods.length;j++){
 					creatLi(arr_goods[j]);
 				}
+
 				reAll();
+
+
+
 			}else if($(e.target).attr('name') === 'qty'){
 				// console.log('input');
 				// 取消禁用
@@ -194,7 +207,7 @@ require(['config'],function(){
 					$currentLi.find('.sum').text(`￥${tol}`);
 
 					// cookie更新
-					// com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
+					com.Cookie.set('gwc',JSON.stringify(arr_goods),{path:'/'});
 					break;
 				}
 			}

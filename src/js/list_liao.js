@@ -26,6 +26,8 @@ require(['config'],function(){
 					}
 				})
 
+				
+
 
 				// 点击页码切换分页
 				$mainPag.on('click','span',function(){

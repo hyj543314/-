@@ -1,6 +1,6 @@
 
 
-;define(function(){
+define(function(){
 	return {
 		/*
 			* 封装常用方法

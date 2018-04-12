@@ -21,3 +21,42 @@ gulp.task('jtSass',function(){
 	gulp.watch('./src/sass/*.scss',['compileSass']);
 })
 
+gulp.task('default',function(){
+    // console.log(gulp)
+    gulp.src('./src/lib/bootstrap-sass-3.3.7/assets/stylesheets/*.scss')
+    .pipe(sass({outputStyle:'compact'}).on('error', sass.logError))
+    .pipe(gulp.dest('./src/css/'))
+});
+
+
+
+
+// 自动刷新服务器
+let browserSync = require('browser-sync');
+
+// 静态服务器
+gulp.task('server',()=>{
+    browserSync({
+        // 服务器路径
+        // server:'./src/',
+
+        // 代理服务器
+        proxy:'http://localhost:1806',
+
+        // 端口
+        port:1900,
+
+        // 监听文件修改，自动刷新
+        files:['./src/**/*.html','./src/css/*.css','./src/api/*.php']
+    });
+
+    // 监听sass文件修改，并自动编译
+    gulp.watch('./src/sass/*.scss',['compileSass'])
+})
+
+
+
+
+
+
+

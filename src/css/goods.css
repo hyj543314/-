@@ -1,0 +1,220 @@
+.main .nav_info {
+  height: 38px;
+  line-height: 38px;
+  font-size: 12px;
+}
+
+.main .nav_info a {
+  color: #666666;
+}
+
+.main .main_b .product_img {
+  width: 412px;
+  height: 496px;
+  float: left;
+}
+
+.main .main_b .product_img .zoom_big {
+  height: 412px;
+  border: 1px solid #ccc;
+}
+
+.main .main_b .product_img .zoom_small {
+  width: 410px;
+}
+
+.main .main_b .product_img .zoom_small .imgAll {
+  padding: 12px 0px;
+}
+
+.main .main_b .product_img .zoom_small .imgAll .smallImg {
+  float: left;
+  height: 60px;
+  margin-right: 18px;
+  border: 1px solid #ccc;
+}
+
+.main .main_b .product_img .zoom_small .imgAll .smallImg a {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.main .main_b .main_bc {
+  width: 530px;
+  border-right: 1px solid #eeeeee;
+  padding-right: 25px;
+  float: left;
+  margin-left: 25px;
+  position: relative;
+}
+
+.main .main_b .main_bc p {
+  font-size: 18px;
+  color: #000;
+  line-height: 28px;
+}
+
+.main .main_b .main_bc .product_para2 {
+  padding: 15px;
+  background: #E8E8EA;
+  font-size: 14px;
+  color: #515152;
+}
+
+.main .main_b .main_bc .product_para2 .divmarket span {
+  width: 66px;
+  float: left;
+  display: block;
+}
+
+.main .main_b .main_bc .product_para2 .divmarket del {
+  color: #616162;
+}
+
+.main .main_b .main_bc .product_para2 .sellingPrice {
+  display: block;
+  line-height: 49px;
+  height: 49px;
+}
+
+.main .main_b .main_bc .product_para2 .sellingPrice .price {
+  float: left;
+  width: 230px;
+}
+
+.main .main_b .main_bc .product_para2 .sellingPrice .price b {
+  color: #ff5417;
+  font-size: 30px;
+}
+
+.main .main_b .main_bc .product_para2 .sellingPrice a {
+  color: #515152;
+}
+
+.main .main_b .main_bc .product_para2 .sellingPrice a span {
+  color: #ff5417;
+}
+
+.main .main_b .main_bc .area {
+  color: #515152;
+  width: 510px;
+  margin-bottom: 5px;
+  line-height: 25px;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.main .main_b .main_bc .area span {
+  width: 66px;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.main .main_b .main_bc .area span:last-child {
+  float: right;
+}
+
+.main .main_b .main_bc .area a button {
+  width: 66px;
+  color: #515152;
+}
+
+.main .main_b .main_bc .product_sale {
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #515152;
+  height: 40px;
+}
+
+.main .main_b .main_bc .product_sale .num {
+  border-right: 1px solid #ddd;
+}
+
+.main .main_b .main_bc .product_sale .num, .main .main_b .main_bc .product_sale .evaluate {
+  float: left;
+  width: 240px;
+  text-align: center;
+  height: 14px;
+  line-height: 14px;
+  margin-top: 13px;
+}
+
+.main .main_b .main_bc .product_sale .num em, .main .main_b .main_bc .product_sale .evaluate em {
+  color: red;
+  font-style: normal;
+}
+
+.main .main_b .main_bc .pack {
+  padding: 15px;
+  color: #515152;
+  font-size: 14px;
+}
+
+.main .main_b .main_bc .pack span {
+  width: 66px;
+}
+
+.main .main_b .main_bc .pack a input {
+  width: 60px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.main .main_b .main_bc .quantity {
+  width: 515px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.main .main_b .main_bc .quantity span {
+  float: left;
+  width: 66px;
+  line-height: 36px;
+  display: block;
+  float: left;
+  width: 66px;
+  color: #515152;
+}
+
+.main .main_b .main_bc .quantity span:last-child {
+  width: 120px;
+  margin-left: 20px;
+}
+
+.main .main_b .main_bc .quantity input {
+  float: left;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+}
+
+.main .main_b .main_bc .purchase {
+  width: 530px;
+}
+
+.main .main_b .main_bc .purchase ul li {
+  float: left;
+  margin: 15px 0 0 15px;
+  border: 2px solid #FF5722;
+}
+
+.main .main_b .main_bc .purchase ul li a {
+  display: block;
+  width: 195px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.main .main_b .main_bc .purchase ul li .buy {
+  color: #FF5722;
+}
+
+.main .main_b .main_bc .purchase ul li .append {
+  color: #fff;
+  background: #FF5722;
+}

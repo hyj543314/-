@@ -1,0 +1,279 @@
+// 导入scss文件
+@import '_var';
+
+
+
+//头部
+.header{
+    color: #000;
+    font-size: 13px;
+    line-height: 40px;
+    .header_t{
+        background-color: #f9f9f9;
+        border-bottom:1px solid #ccc;
+        .header_tl{
+            width: 143px;
+            height: 40px;
+        }
+        .header_tr{
+            width: 232px;
+            height: 40px;
+            .top_r{
+                width: 232px;
+                height: 40px;
+                color: #959595;
+                 li{
+                    float:left;
+                    position: relative;
+                    // z-index: 99;
+                    margin-right: 15px;
+                    width: 43px;
+                    height: 40px;
+                    i{
+                        display: block;
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        left: -15px;
+                        top: 5px;
+                        background: url(../css/img/index.fw.png) no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .header_b{
+        .header_bt{
+            .header_btl{
+               width: 220px;
+               height: 103px; 
+               float:left;
+               a img{
+                    margin-top: 15px;
+                    margin-bottom:28px;
+                    width: 200px;
+                    height: 60px;
+                    overflow: hidden;
+                    display:block;
+                }
+               
+            }   
+            .header_btc{
+                // display:inline-block;
+                // width: 628px;
+                // height: 103px;
+                float:left;
+                padding:31px  0 0 145px;
+                width:628px;
+                height: 103px;
+                position:relative;
+                .search{
+                    float:left;
+                    width: 387px;
+                    height: 35px;
+                    border: 2px solid #fe5722;
+                    color: #D1D1D1;
+                    outline: none;
+                    padding-left: 35px;
+                }
+                i{
+                    display: block;
+                    position: absolute;
+                    width:20px;
+                    height: 20px;
+                    left: 150px;
+                    top: 40px;
+                    background: url(../css/img/index.fw.png) no-repeat;
+                }
+                .btn{
+                    float:left;
+                    width: 93px;
+                    height: 35px;
+                    background-color: #fe5722;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 35px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    border: none;
+                }
+            
+            }
+            .header_btr{
+                // width: 332px;
+                // height: 103px;
+                // float:right; 
+                // width: 110px;
+                // height: 35px;
+                // padding:31px  0 0 168px;
+                // font-size:14px;
+                float:right;
+                width: 165px;
+                height: 35px;
+                display: inline;
+                margin-top: 30px;
+                // background: #f5f5f5 url(../images/shopcart_03.png) no-repeat 25px 8px;
+                padding-left: 55px;
+                color: #FFF;
+                line-height: 35px;
+                position:relative;
+                background: #f5f5f5;
+                i{
+                    display: block;
+                    position: absolute;
+                    width:15px;
+                    height: 15px;
+                    left: 25px;
+                    top: 8px;
+                    background: url(../css/img/index.fw.png) no-repeat;
+                }
+                
+                a{
+                    color: #333333;
+                    display: block;
+                    width: 100px; 
+                    font-size: 14px;
+                }
+            }
+        } 
+    }
+    .header_nav{
+            height: 40px;
+            border-bottom: 2px solid #fe5722;
+            //一级导航的开始
+            .top-nav{
+                // overflow: hidden;
+                width: 1200px;
+                height: 40px;
+                // li:hover .nav2{
+                //         display:block;
+                //     }
+                li{
+                    float:left;
+                    position:relative;
+                    :hover{
+                        color:red;
+                    }
+                    .title{
+                        position: relative; 
+                        float: left; 
+                        width: 220px;
+                        height: 40px;
+                        line-height: 40px; 
+                        text-align: center; 
+                        background-color: #fe5722;
+                        font-size: 16px; 
+                        font-weight: normal;
+
+                        >a{
+                           color: #fff; 
+                        }
+                        //二级导航的开始
+                        .nav2{
+                            position:absolute;
+                            top:40px;
+                            left:0;
+                            width: 220px;
+                            height: 400px; 
+                            padding-bottom:120px;
+                            // display:none;
+                            // border:1px solid #ccc;
+                            >li{
+                                // width: 220px;
+                                height: 40px;
+                                line-height: 40px;
+                                font-size: 12px;
+                                color: #585858;
+                                :hover{
+                                    color:#fff;
+                                    background: #FE7722;
+                                    }
+                                >a{
+                                    width: 219px;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    font-size: 14px;
+                                    color: #333333;
+                                    display: inline-block;
+                                    position: relative;
+                                    text-align:left; 
+                                    position:relative;  
+                                }
+                                i{
+                                    display: block;
+                                    position: absolute;
+                                    width:16px;
+                                    height: 17px;
+                                    left: 185px;
+                                    top: 8px;
+                                    background: url(../css/img/index.fw.png) no-repeat -170px 0px;
+                                }
+                                //三级导航的开始
+                               // .nav2 li :hover .nav3{
+                               //      display:block;
+                               //  }
+                                    .nav3{
+                                        display: none;
+                                        width: 740px;
+                                        height: 401px;
+                                        position: absolute;
+                                        min-height: 398px;
+                                        top: -2px;
+                                        left: 218px;
+                                        border: 2px solid #ff7043;
+                                        border-top:1px solid #ff7043;
+                                        background-color: #fff;
+                                        padding-top: 20px;
+                                        li{
+                                            h4{
+                                                display:inline-block;
+                                                float:left;
+                                                width: 100px;
+                                                height: 40px;    
+                                            }
+                                            .li0{
+                                                float:left;
+                                                width: 370px;
+                                                height: 40px;
+                                                border-bottom:1px solid #ccc;
+                                                a{
+                                                    // padding-right: 10px;
+                                                    float: left;
+                                                    color: #666666;
+                                                    padding-right: 10px;
+                                                    // display:inline-block;
+                                                    // z-index: 10000;
+                                                    // width:20px;
+                                                    // height: 40px;
+                                                }
+                                            }
+                                        }
+                                    }
+                            }
+                            li:hover .nav3{
+                                        display:block;
+                                    }
+                        }
+                    }
+                    >a{
+                        display: inline-block;
+                        color: #333;
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        text-align: center;
+                        line-height: 35px;
+                        font-size: 16px;
+                        font-weight: lighter;
+                    }
+                }
+
+            }
+        }
+
+}
+
+
+
+
+

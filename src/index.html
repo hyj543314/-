@@ -4,538 +4,221 @@
 	<meta charset="UTF-8">
 	<title>首页</title>
 </head>
-<link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/head.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="js/index.js">
+
+<!-- <link rel="stylesheet" href="css/foot.css"> -->
+<!-- <link rel="stylesheet" href="html/foot.html"> -->
 <link rel="stylesheet" href="lib/jquery.lzxCarousel/jquery.lzxCarousel.css">
+<!-- <script src="lib/jquery-3.2.1.js"></script>
+<script src="lib/jquery.lxCarousel/jquery.lxCarousel.js"></script> -->
 <script src="js/require.js" data-main="js/index"></script>
 <body>
 	<div class="header">
-		<!-- <div class="sldh"></div> -->
-		<div class="container clearfix">
-			<div class="logo">
-				<a href="index.html" class="logo_a">
-					<img src="css/img/header01.png" alt="">
-					<img src="css/img/header03.png" alt="">
-				</a>
-			</div>
-			<ul class="clearfix fl dh">
-				<li class="dhli01">
-					<!-- 二级导航 -->
-					<a href="#" class="zong">礼物分类</a>
-					<ul class="erjidh">
-						<li><a href="html/list_liao.html" target="_blank">少女心饰</a></li>
-						<li><a href="html/list_liao.html" target="_blank">萌萌美物</a></li>
-						<li><a href="html/list_liao.html" target="_blank">为爱停留</a></li>
-						<li><a href="html/list_liao.html" target="_blank">潮流时尚</a></li>
-						<li><a href="html/list_liao.html" target="_blank">科技达人</a></li>
-						<li><a href="html/list_liao.html" target="_blank">幸福烙印</a></li>
-						<li><a href="html/list_liao.html" target="_blank">爱情保鲜</a></li>
-					</ul>
-				</li>
-				<li class="dhli02">
-					<a href="html/list_liao.html" target="_blank">送礼导航</a>
-					<!-- 隐藏的二级导航条(送礼导航) -->
-					<div class="sldh">
-						<p class="towho">
-							<span>送给谁:</span>
-							<span><a href="html/list_liao.html" target="_blank">不限</a></span>
-							<span><a href="html/list_liao.html" target="_blank">公主女票</a></span>
-							<span><a href="html/list_liao.html" target="_blank">欧巴男票</a></span>
-							<span><a href="html/list_liao.html" target="_blank">潮爸辣妈</a></span>
-							<span><a href="html/list_liao.html" target="_blank">兄弟闺蜜</a></span>
-							<span><a href="html/list_liao.html" target="_blank">熊孩子</a></span>
-							<span><a href="html/list_liao.html" target="_blank">生意伙伴</a></span>
-							<span><a href="html/list_liao.html" target="_blank">致谢恩师</a></span>
-						</p>
-						<p class="towhy">
-							<span>为啥送:</span>
-							<span><a href="html/list_liao.html" target="_blank">不限</a></span>
-							<span><a href="html/list_liao.html" target="_blank">表白撩妹</a></span>
-							<span><a href="html/list_liao.html" target="_blank">过生日</a></span>
-							<span><a href="html/list_liao.html" target="_blank">圣诞节</a></span>
-							<span><a href="html/list_liao.html" target="_blank">情人节</a></span>
-							<span><a href="html/list_liao.html" target="_blank">去求婚</a></span>
-							<span><a href="html/list_liao.html" target="_blank">纪念日</a></span>
-							<span><a href="html/list_liao.html" target="_blank">想送任性</a></span>
-						</p>
-						<i class="search">
-							<a href="#">
-								搜索
-							</a>
-						</i>
-					</div>
-					
-				</li>
-				<li><a href="html/list_liao.html" target="_blank">创意礼物</a></li>
-				<li><a href="html/list_liao.html" target="_blank">新品上架</a></li>
-				<li><a href="html/list_liao.html" target="_blank">情人节礼物</a></li>
-			</ul>
-			<div class="fr header_r clearfix">
-				<div class="search fl">
-					<input type="text" name="search">
-					<a href="html/list_liao.html" target="_blank" class="sou">
-					</a>
-				</div>
-				<div class="signCar fr">
-					<section class="sign fl sec">
-						<div class="circle">
-							<ul class="tubiao">
-								<li><a href="html/login.html" target="_blank"><img src="css/img/header02.png" alt=""></a></li>
-								<li><a href="html/login.html" target="_blank"><img src="css/img/header04.png" alt=""></a></li>
-							</ul>
-						</div>
-						<div class="dl bt">
-							<p>
-								<a href="html/login.html">登录/</a>
-								<a href="html/reg.html">注册</a>
-							</p>
-							<p>
-								<a href="#">浏览历史</a>
-							</p>
-							<p>
-								<a href="html/car.html" target="_blank">我的订单</a>
-							</p>
-							<p>
-								<a href="#">我的收藏</a>
-							</p>
-							<div class="jt jt1"></div>
-							<div class="jt jt2"></div>
-						</div>
-					</section>
-					<section class="car fl sec">
-						<div class="circle">
-							<ul class="tubiao">
-								<li><a href="html/car.html" target="_blank"><img src="css/img/header.png" alt=""></a></li>
-								<li><a href="html/car.html" target="_blank"><img src="css/img/header05.png" alt=""></a></li>
-							</ul>
-						</div>
-						<span class="num">1</span>
-						<div class="carList bt">
-							<ul>
-								<li>
-									<img src="../img/goods10.png" alt="" >
-									<div class="mdl fl">
-										<p class="name">心相印</p>
-										<p class="style">个性定制：直接购买</p>
-									</div>
-									<div class="rig fr">
-										<p class="qty">&times;1</p>
-										<p class="price">￥128.0</p>
-										<p>
-											<a href="#" class="del">删除</a>
-										</p>
-									</div>
-								</li>
-							</ul>
-							<div class="kong">购物车中还没有商品，赶紧抢购吧！</div>
-							<div class="js_box">
-								<div class="fl">
-									<p>共计<i>1</i>件商品</p>
-									<p class="sum">合计：<i>￥218.0</i></p>
-								</div>
-								<a href="html/car.html">去购物车结算</a>
-							</div>
-							<div class="jt1 jt"></div>
-							<div class="jt2 jt"></div>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="banner">	
-	</div>
-	<div class="main_header">
-		<div class="container">
-			<ul class="clearfix">
-				<li>
-					<div class="circle"></div>
-					<a href="#">专属定制服务</a>
-				</li>
-				<li>
-					<div class="circle" style="background-position: -46px 5px"></div>
-					<a href="#">激光镭雕工艺</a>
-				</li>
-				<li>
-					<div class="circle" style="background-position: -100px 7px"></div>
-					<a href="#">免费代写贺卡</a>
-				</li>
-				<li>
-					<div class="circle" style="background-position: -151px 7px"></div>
-					<a href="#">精心专业设计</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class="main">
-		<div class="container">
-			<div class="main01">
-				<ul class="clearfix">
-					<li>
-						<a href="html/list_liao.html" target="_blank">
-							<img src="css/img/main05.png" alt="">
-						</a>
-					</li>
-					<li>
-						<a href="html/list_liao.html" target="_blank">
-							<img src="css/img/main06.png" alt="">
-						</a>
-					</li>
-					<li>
-						<a href="html/list_liao.html" target="_blank">
-							<img src="css/img/main07.png" alt="">
-						</a>
-					</li>
-					<li class="last">
-						<a href="html/list_liao.html" target="_blank">
-							<img src="css/img/main08.png" alt="">
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="main02">
-				<div class="main_til">
-					<h3 class="same">新品推荐</h3>
-					<a href="#" class="same">查看更多</a>
-					<!-- 横线 -->
-					<i class="hx"></i>
-				</div>
-				<ul class="clearfix ul_01">
-					<li>
-						<a href="html/list_liao.html" target="_blank">
-							<img src="css/img/main10.png" alt="" class="list">
-						</a>
-					</li>
-					<!-- <li>
-						<a href="#">
-							<img src="img/goods04.png" alt="">
-							<p class="decp">萌宠化妆镜 自然光更美丽</p>
-							<p class="price">￥148.0</p>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/goods04.png" alt="">
-							<p class="decp">萌宠化妆镜 自然光更美丽</p>
-							<p class="price">￥148.0</p>
-						</a>
-					</li>
-					<li class="last">
-						<a href="#">
-							<img src="img/goods04.png" alt="">
-							<p class="decp">萌宠化妆镜 自然光更美丽</p>
-							<p class="price">￥148.0</p>
-						</a>
-					</li> -->
-				</ul>
-				<ul class="clearfix ul_02">
-					<li>
-						<a href="#" class="clearfix">
-							<div class="pic">
-								<img src="img/goods08.png" alt="">
-							</div>
-							<div class="wenzi">
-								<p class="news">云端的爱恋</p>
-								<p>可定制文字</p>
-								<p>送给他人专属祝福</p>
-								<p class="price">￥89.0</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="clearfix">
-							<img src="img/goods09.png" alt="">
-							<p>七巧小公仔</p>
-							<p class="price">￥148.0</p>
-						</a>
-					</li>
-					<li class="last">
-						<a href="#" class="clearfix">
-							<div class="pic">
-								<img src="img/goods10.png" alt="">
-							</div>
-							<div class="wenzi">
-								<p class="news">美好的你</p>
-								<p>在最美的时刻</p>
-								<p>遇见最美的你</p>
-								<p class="price">￥189.0</p>
-							</div>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="main03">
-				<div class="main_til">
-					<h3 class="same">生日礼物</h3>
-					<a href="#" class="same">查看更多</a>
-					<!-- 横线 -->
-					<i class="hx"></i>
-				</div>
-				<div class="clearfix cont">
-					<a href="#" class="fl">
-						<img src="css/img/main11.png" alt="" class="bigpic">
-					</a>
-					<!-- <ul class="clearfix fl">
-						<li><a href="#">
-						 		<img src="img/goods01.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods02.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods03.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li class="last"><a href="#">
-						 		<img src="img/goods04.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods05.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods06.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods07.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li class="last"><a href="#">
-						 		<img src="img/goods08.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li> 
-					</ul> -->
-				</div>
-			</div>
-			<div class="main04">
-				<div class="main_til">
-					<h3 class="same">创意礼物</h3>
-					<a href="#" class="same">查看更多</a>
-					<!-- 横线 -->
-					<i class="hx"></i>
-				</div>
-				<div class="clearfix cont">
-					<a href="#" class="fl">
-						<img src="css/img/main12.png" alt="" class="bigpic">
-					</a>
-					<!-- <ul class="clearfix fl">
-						<li><a href="#">
-						 		<img src="img/goods01.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods02.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods03.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li class="last"><a href="#">
-						 		<img src="img/goods04.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods05.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods06.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li><a href="#">
-						 		<img src="img/goods07.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li>
-						 <li class="last"><a href="#">
-						 		<img src="img/goods08.png" alt="">
-						 		<p>酷玩台灯</p>
-						 		<p>￥89.0</p>
-						 	</a></li> 
-					</ul> -->
-				</div>
-			</div>
-			<div class="main05">
-				<div class="main_til">
-					<h3 class="same">热评商品</h3>
-					<a href="#" class="same">查看更多</a>
-					<!-- 横线 -->
-					<i class="hx"></i>
-				</div>
-				<!-- <ul class="clearfix">
-					<li>
-						<a href="#">
-							<img src="img/goods01.png" alt="">
-						</a>
-						<p class="cont">很喜欢，一分钱一分货，送给对象的礼物，她很高兴，试用了感觉还不错哦，以后就可以。</p>
-						<p class="user_cont">来自于monsle的评价</p>
-						<p>
-							<span>暖暖杯 / </span>
-							<span>￥ 138.0</span>
-						</p>
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/goods01.png" alt="">
-						</a>
-						<p class="cont">很喜欢，一分钱一分货，送给对象的礼物，她很高兴，试用了感觉还不错哦，以后就可以。</p>
-						<p class="user_cont">来自于monsle的评价</p>
-						<p>
-							<span>暖暖杯 / </span>
-							<span>￥ 138.0</span>
-						</p>
-
-					</li>
-					<li>
-						<a href="#">
-							<img src="img/goods01.png" alt="">
-						</a>
-						<p class="cont">很喜欢，一分钱一分货，送给对象的礼物，她很高兴，试用了感觉还不错哦，以后就可以。</p>
-						<p class="user_cont">来自于monsle的评价</p>
-						<p>
-							<span>暖暖杯 / </span>
-							<span>￥ 138.0</span>
-						</p>
-
-					</li>
-					<li class="last">
-						<a href="#">
-							<img src="img/goods01.png" alt="">
-						</a>
-						<p class="cont">很喜欢，一分钱一分货，送给对象的礼物，她很高兴，试用了感觉还不错哦，以后就可以。</p>
-						<p class="user_cont">来自于monsle的评价</p>
-						<p>
-							<span>暖暖杯 / </span>
-							<span>￥ 138.0</span>
-						</p>
-
-					</li>
-				</ul> -->
-			</div>
-		</div>
-		
-		
-	</div>
-	<div class="footer">
-		<div class="footer01">
+		<div class="header_t clearfix">
 			<div class="container">
-				<ul class="clearfix">
-					<li>
-						<img src="css/img/footer01.png" alt="">
-					</li>
-					<li>
-						<img src="css/img/footer02.png" alt="">
-					</li>
-					<li>
-						<p class="gzwm">关注我们</p>
-						<img src="css/img/footer03.png" alt="">
-					</li>
-					<li>
-						<h3>400-611--2156</h3>
-						<p class="time">周一至周日 8:00-24:00</p>
-						<div class="chat">
-							<a href="#">QQ在线交谈</a>
-						</div>
-					</li>
-				</ul>
+				<div class="header_tl fl">您好，欢迎光临阳光海淘</div>
+				<div class="header_tr fr">
+					<ul class="top_r">
+						<li>
+							<a href="http://www.i-sunny.cn/Register">注册</a>
+						</li>
+						<li>
+							<a href="http://www.i-sunny.cn/User/login">登录</a>
+						</li>
+						<li><i style="background-position:0px 0px;"></i></li>
+						<li><i style="background-position:-40px 0px;"></i></li>
+					</ul>	
+				</div>
 			</div>
 		</div>
-		<div class="footer02">
+		<div class="header_b">
 			<div class="container">
-				<div class="footer02_t">
-					<ul class="clearfix">
-						<li>
-							<div class="secu">30天免费退换货</div>
-							<i></i>
-						</li>
-						<li>
-							<div class="secu">100%正品保证</div>
-							<i style="background-position: -88px 0px;"></i>
-						</li>
-						<li>
-							<div class="secu secu03">全场免运费</div>
-							<i style="background-position: -176px 0px;"></i>
-						</li>
-						<li class="last">
-							<div class="secu la">提供礼品级包装</div>
-							<i class="lasti" style="background-position: -264px 0px;"></i>
-						</li>
-					</ul>
-				</div>
-				<div class="footer02_m clearfix">
-					<div class="fl">
-						<p>@liwuyou.com <a href="#">粤ICP备10222238号-1</a></p>
+				<div class="header_bt clearfix">
+					<div class="header_btl fl">
+						<a href="#">
+							<img src="css/img/index_logo.gif" alt="" />
+						</a>
 					</div>
-					<ul class="fr clearfix">
-						<li><a href="#">关于我们</a></li>
-						<li><a href="#">帮助中心</a></li>
-						<li><a href="#">人才招聘</a></li>
-						<li><a href="#">售后服务</a></li>
-						<li><a href="#">配送与验收</a></li>
-						<li><a href="#" class="last">联系我们</a></li>
-					</ul>
-				</div>
-				<div class="footer02_b">
-					<div class="links">
-						<span class="first">友情链接：</span>
-						<span><a href="#">照片书</a></span>
-						<span><a href="#">厦门特产</a></span>
-						<span><a href="#">新疆和田玉</a></span>
-						<span><a href="#">健身减肥</a></span>
-						<span><a href="#">网上冲印</a></span>
-						<span><a href="#">红酒</a></span>
-						<span><a href="#">钻戒定制</a></span>
-						<span><a href="#">茶叶网</a></span>
-						<span><a href="#">紫砂壶</a></span>
-						<span><a href="#">钻石</a></span>
-						<span><a href="#">批发网</a></span>
-						<span><a href="#">眼镜</a></span>
-						<span><a href="#">藏龙古玩网</a></span>
-						<span><a href="#">手表</a></span>
-						<span><a href="#">中国鲜花礼品网</a></span>
-						<span><a href="#">礼物</a></span>
-						<span><a href="#">影楼网</a></span>
-						<span><a href="#">中国音响</a></span>
-						<span><a href="#">人民币收藏</a></span>
-						<span><a href="#">加盟网</a></span>
-						<span><a href="#">美瞳</a></span>
-						<span><a href="#">欧宝丽官网</a></span>
-						<span><a href="#">服装搭配</a></span>
-						<span><a href="#">鞋</a></span>
-						<span><a href="#">钻戒</a></span>
-						<span><a href="#">纸艺网</a></span>
-						<span><a href="#">商机网</a></span>
-						<span><a href="#">唯品会品牌折扣网</a></span>
-						<span><a href="#">玩具</a></span>
-						<span><a href="#">53货源网</a></span>
-						<span><a href="#">国金珠宝网</a></span>
-						<span><a href="#">型尚网</a></span>
-						<span><a href="#">饰品招商加盟</a></span>
-						<span><a href="#">礼物网</a></span>
+					<div class="header_btc">
+						<i style="background-position:-140px 0px;"></i>
+		                <input type="text" class="search" />
+		             	<input type="button" value="搜索"  class="btn"/>      
 					</div>
-					<i class="brand"></i>
+					<div class="header_btr">
+						<i style="background-position:-100px 0px;"></i>
+						<a href="#"><span>购物车 0 件</span></a>
+						<i style="background-position:-120px 0px;left: 140px;top:13px;"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header_nav">
+			<div class="container">
+				<!--一级导航的开始-->
+				<ul class="top-nav">
+					<li class="liAll">
+						<h3 class="title">
+							<a href="#">全部商品分类</a>
+							<!--二级导航的开始-->
+								<ul class="nav2">
+									<li>
+										<a href="#">母婴专区</a>
+										<i></i>
+										<!--三级导航的开始-->
+										<ul class="nav3">
+											<li>
+												<h4>尿裤湿巾</h4>
+												<div class="li1 li0">
+													<a href="#">NB</a>
+													<a href="#">S</a>
+													<a href="#">M</a>
+													<a href="#">L</a>
+													<a href="#">XL</a>
+													<a href="#">XXL</a>
+													<a href="#">拉拉裤</a>
+													<a href="#">花王</a>
+													<a href="#">大王</a>
+													<a href="#">尤妮佳</a>
+												</div>
+											</li>
+											<li>
+												<h4>婴儿用品</h4>
+												<div class="li2 li0">
+													<a href="#">宝宝小药</a>
+													<a href="#">洗漱护肤</a>
+													<a href="#">喂养工具</a>
+													<a href="#">宝宝出行</a>
+													<a href="#">清洁消毒</a>
+													<a href="#">益智玩具</a>
+												</div>
+											</li>
+											<li>
+												<h4>品牌奶粉</h4>
+												<div class="li3 li0">
+													<a href="#">特福芬</a>
+													<a href="#">喜宝</a>
+													<a href="#">爱他美</a>
+													<a href="#">贝唯他</a>
+													<a href="#">雀巢BEBA</a>
+													<a href="#">米路米Milumil</a>
+												</div>
+											</li>
+											<li>
+												<h4>营养辅食</h4>
+												<div class="li4 li0">
+													<a href="#">辅食泥</a>
+													<a href="#">米粉/米糊</a>
+													<a href="#">营养品</a>
+													<a href="#">饼干</a>
+													<a href="#">其他零食</a>
+												</div>
+											</li>
+											<li>
+												<h4>阶段奶粉</h4>
+												<div class="li5 li0">
+													<a href="#">Pre段</a>
+													<a href="#">1段</a>
+													<a href="#">2段</a>
+													<a href="#">3段</a>
+													<a href="#">4段</a>
+													<a href="#">1+段</a>
+													<a href="#">2+段</a>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">美妆个护</a><i></i></li>
+									<li><a href="#">数码家电</a><i></i></li>
+									<li><a href="#">家居日用</a><i></i></li>
+									<li><a href="#">环球美食</a><i></i></li>
+									<li><a href="#">营养保健</a><i></i></li>
+									<li><a href="#">运动户外</a><i></i></li>
+								</ul>	
+						</h3>
+					</li>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">母婴专区</a></li>
+					<li><a href="#">美妆个护</a></li>
+					<li><a href="#">数码家电</a></li>
+					<li><a href="#">家居日用</a></li>
+					<li><a href="#">环球美食</a></li>
+					<li><a href="#">营养保健</a></li>
+					<li><a href="#">运动户外</a></li>
+				</ul>
+			</div>	
+		</div>
+
+	</div>
+	<div class="nav clearfix">
+		<div class="container">
+			<div class="nav2"></div>
+			<div class="banner"></div>
+			<div class="notice">
+				<div class="notice_top">
+					<span><h4>商城公告</h4></span>
+				</div>
+				<div class="notice_bottom">
+					<a href="#"><img src="img/index01.jpg" alt="" /></a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<footer>
+    <div class="container">
+        <div class="footer-nav">
+            <dl>
+                <dt>欢迎加盟
+                    <dd><a href="#">支持加盟</a></dd>
+                    <dd><a href="#">发展代理</a></dd>
+                </dt>
+            </dl>
+            <dl>
+                <dt>退换服务 
+                    <dd><a href="#">订购方式</a></dd>
+                    <dd><a href="#">退货换货</a></dd>
+                </dt>
+            </dl>
+            <dl>
+                <dt>如何支付 
+                    <dd><a href="#">新手常见问题</a></dd>
+                    <dd><a href="#">快递查询</a></dd>
+                </dt>
+            </dl>
+            <dl>
+                <dt>客服中心 
+                    <dd><a href="#">联系方式</a></dd>
+                    <dd><a href="#">投诉建议</a></dd>
+                </dt>
+            </dl>
+            <dl>
+                <dt>配送信息 
+                    <dd><a href="#">配送方式</a></dd>
+                    <dd><a href="#">同城配送</a></dd>
+                </dt>
+            </dl>
+            <dl>
+                <dt>联系我们 
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">网站加盟</a></dd>
+                </dt>
+            </dl>
+        </div>
+        <p align="center" class="p1">
+            <a href="#">关于海淘</a>
+            <a href="#">商务合作</a>
+            <a href="#">帮助中心</a>
+            <a href="#">联系我们</a>
+            <a href="#">网站地图</a>
+
+        </p>
+        <p align="center" class="p2">
+        Copyright © 2012--2017 i-sunny.cn 版权所有 | 京ICP备11003669号-1&nbsp;| 内容举报：kefu@i-sunny.cn
+        </p> 
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,64 @@
+// 导入scss文件
+@import '_var';
+
+
+//底部
+footer{
+    background-color: #616161;
+    border-top: 1px solid #e3e3e3;
+    padding: 30px 0;
+    margin-top: 30px;
+    overflow: hidden;
+    .footer-nav{
+    	height: 106px;
+    	width: 1200px;
+	    clear: both;
+	    overflow: hidden;
+	    dl{
+	    	float:left;
+		    width: 200px;
+		    dt{
+		    	color: #e0e0e0;
+			    font-size: 14px;
+			    height: 30px;
+			    line-height: 30px;
+			    margin-bottom: 2px;
+			    padding: 0 8px;
+			    font-weight: bold;
+
+				}
+			dd{
+				font-size: 14px;
+				height: 24px;
+				line-height: 24px;
+				padding: 0 8px;
+				background-position: -60px 9px;
+				// font-weight: lighter;
+				color: #e0e0e0;
+				:hover{
+					color:red;
+				}
+				a{
+				    display:block;
+				    color:#e0e0e0;
+				    }
+		    }
+	    }
+    }
+    .p1{
+    	a{
+    		color: #686868;
+    		font-size:12px;
+    		padding:0 2px 0 2px;
+    		border-right:1px solid #ddd;
+    	}
+    	:hover{
+    		color:red;
+    	}
+    }
+    .p2{
+    	color: #8d8d8d;
+    	font-weight: lighter;
+    	font-size:12px;
+    }
+}

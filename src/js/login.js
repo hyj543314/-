@@ -3,7 +3,7 @@ require(['config'],function(){
 		// 引入头部文件
 		$('.loginHeader').load('../html/header.html',function(){
 			// 引入头部的js文件
-			require(['header'],function(){
+			require(['head'],function(){
 				
 				// 判断手机号码是否合法
 				var phone;

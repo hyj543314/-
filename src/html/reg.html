@@ -8,30 +8,60 @@
 <link rel="stylesheet" href="../css/reg.css">
 <script src="../js/require.js" data-main="../js/reg"></script>
 <body>
-	<div class="regHeader"></div>
-	<div class="main">
-		<div class="rg">
-			<h1>注册礼无忧账号</h1>
-			<div class="rg_in">
-				<input type="text" placeholder="请输入手机号" name="phone" id="phone">
-				<p></p>
+	<header>
+		<div class="container">
+			<div class="header_t">
+				<div class="header_tl">
+					<a href="#"><img src="../css/img/index_logo.gif" alt="" /></a>
+				</div>
+				<div class="header_tr">
+					<span>欢迎注册</span>
+				</div>
 			</div>
-			<div class="rg_in">
-				<input type="password" placeholder="请输入密码6-12位" name="password" id="password">
-				<p></p>
-			</div>
-			<div class="rg_in">
-				<input type="password" placeholder="请再次输入密码" id="password2">
-				<p></p>
-			</div>
-			<div class="rg_xy">
-				<p>注册即视为同意<a href="#">《礼无忧用户注册协议》</a></p>
-			</div>
-			<div class="rg_bt">
-				<a href="#">立即注册</a>
+			<div class="header_b">
+				<span>我已注册，现在就去<a href="#">登录</a></span>
 			</div>
 		</div>
+	</header>
+	<div class="main">
+		<div class="reg">
+			<label for="email">邮箱</label><input type="text" id="email" /><span>6-50位字符组成</span> <br />
+			<label for="pwd">密码</label><input type="text" id="pwd" /><span>6-20位字符，可由英文、数字及标点符号组成</span> <br />
+            <label for="pwd2">确认密码</label><input type="text" id="pwd2" /><span>请再次输入密码</span> <br />
+            <label for="name">真实姓名</label><input type="text" id="name" /><span>6-20位字符，可由中文或英文组成</span> <br />
+            <label for="gender">性别</label><input type="text" id="gender"/><br />
+            <!-- 性别<input type="radio" name="gender" checked/>男 <input type="radio" name="gender"/>女   <br /> -->
+            <div class="birthday"><span>生日</span><input type="datetime-local" /> <br /></div>
+            <!-- <label for="birthday">生日</label><input type="text" id="birthday"/><br /> -->
+            <label for="yanzheng">图形验证码</label><input type="text" id="yanzheng" />
+            <span id="code"></span><a href="#" onclick="createCode()">看不清，换一个</a> <span>请输入验证码，不区分大小写</span><br />
+            <p>
+	            <input type="checkbox" class="checkbox"/>
+	            <span> 我已阅读并同意<a href="#">  会员注册协议 </a></span>
+            </p><br />
+            <input type="submit" value="立即注册" class="submit" /><br />
+            
+
+
+		</div>
 	</div>
-	<div class="regFooter"></div>
+	<footer>
+    	<div class="container">
+        <div class="p3">
+        	<a href="#">Hishop网店系统</a>
+        </div>
+        <p align="center" class="p1">
+            <a href="#">关于海淘</a>
+            <a href="#">商务合作</a>
+            <a href="#">帮助中心</a>
+            <a href="#">联系我们</a>
+            <a href="#">网站地图</a>
+
+        </p>
+        <p align="center" class="p2">
+        Copyright © 2012--2017 i-sunny.cn 版权所有 | 京ICP备11003669号-1&nbsp;| 内容举报：kefu@i-sunny.cn
+        </p> 
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,249 +1,245 @@
 // 导入scss文件
 @import '_var';
 
-//背景颜色
-$bgc:#F5F5F5;
-//全局字体颜色
-$color:#333333;
-//全局字体大小
-$fsize:12px;
-$highColor:#D93732;
 
 //头部
-.carHeader{
-	height:96px;
-	.container{
-		position:relative;
-		height:100%;
-	}
-	h1{
-		padding-left:85px;
-		height:100%;
-		font-size:28px;
-		line-height:96px;
-		font-weight:normal;
-	}
-	//logo图标
-	.logo{
-		/*主页的logo部分*/
-		width:56px;
-		height:56px;
-		border-radius:50%;
-		position:absolute;
-		left:0;
-		top:50%;
-		transform:translateY(-50%);
-		background-color:#D93732;
-		overflow:hidden;
-		.logo_a{
-			background-color:#D93732;
-			width:100px;
-			position:absolute;
-			left:5px;
-			top:8px;
-			padding:5px 0;
-			img{
-				float:left;
-				margin:0 3px;
-				width:38px;
-				height:28px;
-			}
-		}
-		//background:url(img/header.fw.png);
-	}
+.header{
+    color: #000;
+    font-size: 13px;
+    line-height: 40px;
+    .header_t{
+        background-color: #f9f9f9;
+        border-bottom:1px solid #ccc;
+        .header_tl{
+            width: 143px;
+            height: 40px;
+        }
+        .header_tr{
+            width: 232px;
+            height: 40px;
+            .top_r{
+                width: 232px;
+                height: 40px;
+                color: #959595;
+                 li{
+                    float:left;
+                    position: relative;
+                    // z-index: 99;
+                    margin-right: 15px;
+                    width: 43px;
+                    height: 40px;
+                    i{
+                        display: block;
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        left: -15px;
+                        top: 5px;
+                        background: url(../css/img/index.fw.png) no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .header_b{
+        .header_bt{
+            .header_btl{
+               width: 220px;
+               height: 103px; 
+               float:left;
+               a img{
+                    margin-top: 15px;
+                    margin-bottom:28px;
+                    width: 200px;
+                    height: 60px;
+                    overflow: hidden;
+                    display:block;
+                }   
+            }   
+            .header_btr{
+                .cart_step{
+                    width: 491px;
+                    overflow: hidden;
+                    float: right;
+                    position:relative;
+                    // :first-child{
+                    //             color: #ff561a;
+                    //     }
+                    i{
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width: 490px;
+                        height: 26px;
+                        background: url(../css/img/index.fw.png) no-repeat -5px -50px;
+                    }
+                    li{
+                        float: left;
+                        width: 163px;
+                        height: 103px;
+                        line-height: 103px;
+                        font-size:12px;
+                        text-align:center;
+                        color: #ff561a;
+                    }
+                    li:nth-child(3),li:nth-child(4){
+                        color:#AAAAAA;
+                    }
+                }
+            }
+        } 
+    }
+
+}
+
+//main
+.main{
+    .main_top_l{
+        height: 45px;
+        line-height: 45px;
+        background-color: #f1f1f1;
+        padding:0 10px;
+        .checkbox{
+        }
+        div{
+            margin-left: 10px;
+            color: #585552;
+            font-size: 12px;
+            width: 200px;
+        }
+        // .select{
+        //     width: 145px;
+        // }
+        // .nam{
+        //     width: 500px;
+        // }
+        // .price{
+        //     width: 200px;
+        // }
+        // .num{
+        //     width: 218px;
+        // }
+        // .total{
+        //     width: 111px;
+        // }
+    }
+    .main_top_r{
+        height: 58px;
+        line-height: 58px;
+        padding:0 10px;
+        span{
+            font-size:12px;
+            margin-left:20px;
+        }
+    }
+    i{
+        display:block;
+        height: 3px;
+        background: #E0E0E0;
+    }
+    .main_bottom{
+        height: 50px;
+        line-height: 50px;
+        border:1px solid #dcdcdc;
+        margin-top:25px;
+        font-size:12px;
+        background: #fafafa;
+        margin:25px 0;
+        >a{    
+            margin-left: 20px;
+            color: #686868;      
+        }
+        >a:hover{
+            color:red;
+        }
+       .main_bottom_r{
+            span{
+                color: #686868;
+                margin:0 20px;
+                em,b{
+                    font-style:normal;
+                    color:red;
+                }
+                b{
+                    font-size:18px;
+                }
+            }
+            button{
+                display: block;
+                font-size: 16px;
+                text-align: center;
+                background: #ff561a;
+                border: 0px;
+                font-weight: bold;
+                width: 120px;
+                height: 50px;
+                a{
+                    color: #FFF;
+                }
+            }
+       }
+    }
 }
 
 
-.hty{
-	background-color:$bgc;
-	height:62px;
-	width:100%;
-	padding-top:24px;
-	.hty_l{
-		float:left;
-		>a{
-			display:inline-block;
-			height:16px;
-			font-size:$fsize;
-			color:$color;
-		}
-	}
-	.hty_r{
-		width:380px;
-		h5,a{
-			display:inline-block;
-			font-size:$fsize;
-			color:$color;
-		}
-		h5{
-			font-weight:normal;
-			line-height:25px;
-			height:20px;
-		}
-		a{	
-			margin-left:10px;
-			width:92px;
-			height:24px;
-			line-height:20px;
-			border:2px solid #A8A8A7;
-			border-radius:12px;
-			text-align:center;
-			&:hover{
-				border-color:$highColor;
-			}
-		}
-	}
-}
+//底部
+footer{
+    // background-color: #616161;
+    background-color: #f1f1f1;
+    border-top: 1px solid #e3e3e3;
+    padding: 30px 0;
+    margin-top: 30px;
+    overflow: hidden;
+    .footer-nav{
+        height: 106px;
+        width: 1200px;
+        clear: both;
+        overflow: hidden;
+        dl{
+            float:left;
+            width: 200px;
+            dt{
+                color: #e0e0e0;
+                font-size: 14px;
+                height: 30px;
+                line-height: 30px;
+                margin-bottom: 2px;
+                padding: 0 8px;
+                font-weight: bold;
 
-
-//购物车内容
-.carList{
-	padding-bottom:50px;
-	background-color:$bgc;
-	.container{
-		.carMain{
-			
-			background-color:#fff;
-			.carMain_t{
-				height:70px;
-				
-				border-bottom:1px solid $bgc;
-				span{
-					display:inline-block;
-					font-size:14px;
-					padding:0 46px;
-					color:$color;
-					line-height:70px;
-				}
-			}
-			.carMain_m{
-				
-				border-bottom:1px solid $bgc;
-				div.fl{
-					position:relative;
-					height:100%;
-					img{
-						display:block;
-						position:absolute;
-						width:94px;
-						height:88px;
-						left:36px;
-						top:57%;
-						transform:translateY(-50%);
-					}
-					p{
-						font-size:$fsize;
-						height:20px;
-						line-height:16px;
-						padding-left:140px;
-					}
-					.name{
-						color:$color;
-						margin-top:24px;
-					}
-					.ty{
-						color:#666666;
-					}
-				}
-				div.fr{
-					height:100%;
-					span{
-						padding:0 41px;
-						display:inline-block;
-						font-size:14px;
-						color:$color;
-						line-height:130px;
-					}
-					span.qty{
-						padding:0;
-						position:relative;
-						input{
-							width:114px;
-							height:40px;
-							border:none;
-							outline:none;
-							text-align:center;
-							border:1px solid #DDDDDD;
-							background-color:#fff;
-						}
-						a{
-							display:block;
-							width:20px;
-							height:14px;
-							position:absolute;
-							top:50%;
-							transform:translateY(-50%);
-						}
-						a.add{
-							right:1px;
-							background:url(img/car03.png) no-repeat;
-						}
-						a.reduce{
-							left:1px;
-							background:url(img/car02.png) no-repeat;
-						}
-					}
-					span.del{
-						position:relative;
-						width:115px;
-						a{
-							display:block;
-							width:24px;
-							height:40px;
-							position:absolute;
-							left:38px;
-							top:-28px;
-							background:url(img/car04.png) no-repeat;
-						}
-					}
-				}
-			}
-
-			.carMain_b{
-				height:82px;
-				>div{
-					height:100%;
-				}
-				div.fl{
-					padding-left:36px;
-					position:relative;
-					a{
-						font-size:14px;
-						color:$color;
-						line-height:82px;
-						padding-left:22px;
-						background:url(img/car01.png) no-repeat -2px -4px;
-					}
-				}
-				div.fr{
-					width:526px;
-					position:relative;
-					>p{
-						font-size:14px;
-						color:$color;
-						line-height:82px;
-						i{
-							padding:0 5px;
-							color:$highColor;
-						}
-					}
-					a.deal{
-						height:48px;
-						width:200px;
-						display:block;
-						position:absolute;
-						right:36px;
-						top:50%;
-						transform:translateY(-50%);
-						background:$highColor;
-						text-align:center;
-						line-height:48px;
-						color:#fff;
-						font-size:14px;
-						border-radius:5px;
-					}
-				}
-			}
-		}
-	}
+                }
+            dd{
+                font-size: 14px;
+                height: 24px;
+                line-height: 24px;
+                padding: 0 8px;
+                background-position: -60px 9px;
+                // font-weight: lighter;
+                color: #e0e0e0;
+                :hover{
+                    color:red;
+                }
+                a{
+                    display:block;
+                    color:#e0e0e0;
+                    }
+            }
+        }
+    }
+    .p1{
+        a{
+            color: #686868;
+            font-size:12px;
+            padding:0 2px 0 2px;
+            border-right:1px solid #ddd;
+        }
+        :hover{
+            color:red;
+        }
+    }
+    .p2{
+        color: #8d8d8d;
+        font-weight: lighter;
+        font-size:12px;
+    }
 }

@@ -8,53 +8,55 @@
 <link rel="stylesheet" href="../css/login.css">
 <script src="../js/require.js" data-main="../js/login"></script>
 <body>
-	<div class="loginHeader"></div>
-	<div class="main">
-		<div class="lg">
-			<h1>欢迎回来<a href="reg.html">现在注册</a><i>还没有账号？</i></h1>
-			<div class="lg_in">
-				<input type="text" placeholder="请输入手机号" id="phoneNum" value="">
-				<p></p>
-			</div>
-			<div class="lg_in">
-				<input type="password" placeholder="长度为6-20，不能包含空格" id="password" value="">
-				<p></p>
-			</div>
-			<div class="lg_bt">
-				<a href="" class="dl">立即登录</a>
-			</div>
-			<div class="lg_md">
-				<input type="checkbox" name="mdl">30天内免登陆
-				<a href="#">忘记密码</a>
-			</div>
-			<div class="lg_qt">
-				<p class="hed">其他方式登录<i></i><i></i></p>
-				<ul class="clearfix">
-					<li>
-						<div class="mov">
-							<a href="#" class="bg"></a>
-							<a href="#"></a>
-						</div>
-						<p>QQ</p>
-					</li>
-					<li>
-						<div class="mov">
-							<a href="#" class="bg"></a>
-							<a href="#"></a>
-						</div>
-						<p>新浪微博</p>
-					</li>
-					<li>
-						<div class="mov">
-							<a href="#" class="bg"></a>
-							<a href="#"></a>
-						</div>
-						<p>支付宝</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="logFooter"></div>
+    <header>
+        <div class="container">
+            <div class="header_t">
+                <div class="header_tl">
+                    <a href="#"><img src="../css/img/index_logo.gif" alt="" /></a>
+                </div>
+                <div class="header_tr">
+                    <span>欢迎登录</span>
+                </div>
+            </div>
+            <!-- <div class="header_b">
+                <span>我已注册，现在就去<a href="#">登录</a></span>
+            </div> -->
+        </div>
+    </header>
+    <div class="main">
+        <img src="../css/img/login01.jpg" alt="" />
+        <div class="login">
+            <div class="info1">
+                <span>用户登录</span>
+                <a href="#">立即注册</a>
+            </div>
+            <input class="info2" type="text" placeholder="邮箱/手机号"/><br />
+            <input class="info3" type="text" placeholder="密码"/><br />
+            <input class="info4" type="checkbox" />
+            <span class="info5">自动登录<a href="#">忘记密码</a></span><br />
+            <a class="info6" href="#">登录</a>
+            <p>使用合作网站账号登录商城：</p>
+            <a href="#"><i></i></a>
+            <a href="#"><i style="background-position:0px 0px;right:265px;bottom:50px;"></i></a>
+            <a href="#"><i style="background-position:-40px 0px;right:230px;bottom:50px;"></i></a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+        <div class="p3">
+            <a href="#">Hishop网店系统</a>
+        </div>
+        <p align="center" class="p1">
+            <a href="#">关于海淘</a>
+            <a href="#">商务合作</a>
+            <a href="#">帮助中心</a>
+            <a href="#">联系我们</a>
+            <a href="#">网站地图</a>
+        </p>
+        <p align="center" class="p2">
+        Copyright © 2012--2017 i-sunny.cn 版权所有 | 京ICP备11003669号-1&nbsp;| 内容举报：kefu@i-sunny.cn
+        </p> 
+        </div>
+    </footer>
 </body>
 </html>

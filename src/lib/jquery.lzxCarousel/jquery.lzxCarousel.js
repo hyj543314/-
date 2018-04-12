@@ -8,8 +8,8 @@
 				// 轮播方式
 				type: 'horizontal', //'vertical','fade'
 
-				width:320,
-				height:320,
+				width:738,
+				height:400,
 				index:0,
 				// 时间间隔
 				duration:3000,

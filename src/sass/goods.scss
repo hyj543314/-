@@ -1,0 +1,232 @@
+// 导入scss文件
+@import '_var';
+
+// //背景颜色
+// $bgc:#F5F5F5;
+// //全局字体颜色
+// $color:#333333;
+// //全局字体大小
+// $fsize:12px;
+// $highColor:#D93732;
+
+
+.main{
+	.nav_info{
+		height: 38px;
+        line-height: 38px;
+        font-size:12px;
+        a{
+            color:#666666;
+            // line-height: 38px;
+        }
+        span{
+
+        }
+    }
+    .main_b{
+    	.product_img{
+    		width: 412px;
+    		height: 496px;
+    		float: left;
+    		.zoom_big{
+				height: 412px;
+				border:1px solid #ccc;
+    		}
+    		.zoom_small{
+    			width: 410px;
+    			// height: 84px;
+    			.imgAll{
+    				// float: left;
+    				padding: 12px 0px;
+				    .smallImg{
+				    	float: left;
+				    	
+				    height: 60px;
+				    margin-right: 18px;
+				    // line-height: 60px;
+				    border:1px solid #ccc;
+				    	 a{
+							display:block;
+					    	
+					    	width: 60px;
+					    	height: 60px;
+				    	}
+				    }
+				   
+    			}
+    		}
+    	}
+    	.main_bc{
+    		width: 530px;
+		    border-right: 1px solid #eeeeee;
+		    padding-right: 25px;
+		    float: left;
+		    margin-left: 25px;
+		    position: relative;
+		    p{
+		    	font-size: 18px;
+			    color: #000;
+			    line-height: 28px;
+		    }
+		    .product_para2{
+		    	padding: 15px;
+		    	background: #E8E8EA;
+		    	font-size: 14px;
+		    	color: #515152;
+		    	.divmarket{
+			    	span{
+			    		width: 66px;
+						float: left;
+						display: block;		
+				    }
+				    del{    
+		    			color: #616162;
+					}
+		    	}
+		    	.sellingPrice{  
+				    display: block;
+				    line-height: 49px;
+				    height: 49px;
+				    .price{
+				    	float: left;
+				    	width: 230px;
+				    	b{
+				    		// float: left;
+				    		color: #ff5417;
+    						font-size: 30px;
+				    	}
+				    }
+				    a{
+				    	color: #515152;
+				    	span{
+				    		color: #ff5417;
+				    	}
+				    }
+		    	}
+		    }
+		    .area{
+		    	color: #515152;
+		    	width: 510px;
+			    margin-bottom: 5px;
+			    // float: left;
+			    line-height: 25px;
+			    position: relative;
+			    margin-top: 10px;
+			    margin-left: 5px;
+		    	span{
+		    		// display: block;
+		    		width: 66px;
+		    		font-size:14px;
+		    		margin-left:15px;
+		    		
+		    	}
+		    	span:last-child{
+		    		float: right;
+		    	}
+		    	a{
+		    		button{
+						width: 66px;
+						color: #515152;
+		    		}
+		    	}
+		    }
+		    .product_sale{
+		    	border-top:1px dashed #ddd;
+		    	border-bottom:1px dashed #ddd;
+		    	margin-top:10px;
+		    	font-size:14px;
+		    	color: #515152;
+		    	// text-align:center;
+		    	height: 40px; 
+		    	// line-height: 40px;
+		    	// vertical-align: middle;
+				    
+		    	.num{
+		    		border-right:1px solid #ddd;
+		    		// z-index: 100;
+		    	}
+		    	.num,.evaluate{
+		    		float: left;
+				    width: 240px;
+				    text-align: center;
+				    height: 14px; 
+				    line-height:14px;
+				    margin-top:13px;
+				    em{
+				    	color:red;
+				    	font-style:normal;
+				    }
+		    	}
+		    }
+		    .pack{
+		    	
+			    padding: 15px;
+			    color: #515152;
+			    font-size:14px;
+
+			    span{
+			    	width: 66px;
+			    }
+			    a{
+			    	input{
+						width: 60px;
+			    		padding:10px;
+			    		cursor: pointer;
+			    	}
+			    }
+		    }
+		    .quantity{
+		    	width: 515px;
+    			overflow: hidden;
+    			padding: 15px;
+		    	span{
+		    		float: left;
+		    		width: 66px;
+		    		line-height: 36px;
+				    display: block;
+				    float: left;
+				    width: 66px;
+				    color: #515152;
+
+		    	}
+		    	span:last-child{
+				    width: 120px;
+				    margin-left:20px;
+				    }
+		    	input{
+		    		float: left;
+					width: 100px;
+			    	padding:10px;
+			    	text-align:center;
+			    	// cursor: pointer;
+			    }
+		    }
+		    .purchase{
+		    	width: 530px;
+		    	ul{
+		    		li{
+		    			float: left;
+		    			margin:15px 0 0 15px;
+		    			// width: 195px;
+		    			// height: 40px;
+		    			border:2px solid #FF5722;
+		    			a{
+							display:block;
+							width: 195px;
+							height: 40px;
+							line-height: 40px;
+							text-align:center;
+		    			}
+		    			.buy{
+							color:#FF5722;
+		    			}
+						.append{
+							color:#fff;
+							background: #FF5722;
+						}
+		    		}
+		    	}
+		    }
+    	}
+    }
+}

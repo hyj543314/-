@@ -1,0 +1,64 @@
+footer {
+  background-color: #616161;
+  border-top: 1px solid #e3e3e3;
+  padding: 30px 0;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+footer .footer-nav {
+  height: 106px;
+  width: 1200px;
+  clear: both;
+  overflow: hidden;
+}
+
+footer .footer-nav dl {
+  float: left;
+  width: 200px;
+}
+
+footer .footer-nav dl dt {
+  color: #e0e0e0;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 2px;
+  padding: 0 8px;
+  font-weight: bold;
+}
+
+footer .footer-nav dl dd {
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  background-position: -60px 9px;
+  color: #e0e0e0;
+}
+
+footer .footer-nav dl dd :hover {
+  color: red;
+}
+
+footer .footer-nav dl dd a {
+  display: block;
+  color: #e0e0e0;
+}
+
+footer .p1 a {
+  color: #686868;
+  font-size: 12px;
+  padding: 0 2px 0 2px;
+  border-right: 1px solid #ddd;
+}
+
+footer .p1 :hover {
+  color: red;
+}
+
+footer .p2 {
+  color: #8d8d8d;
+  font-weight: lighter;
+  font-size: 12px;
+}

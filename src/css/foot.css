@@ -1,24 +1,26 @@
-footer {
+.footer {
   background-color: #616161;
   border-top: 1px solid #e3e3e3;
   padding: 30px 0;
   margin-top: 30px;
   overflow: hidden;
+  float: left;
+  width: 100%;
 }
 
-footer .footer-nav {
+.footer .footer-nav {
   height: 106px;
   width: 1200px;
   clear: both;
   overflow: hidden;
 }
 
-footer .footer-nav dl {
+.footer .footer-nav dl {
   float: left;
   width: 200px;
 }
 
-footer .footer-nav dl dt {
+.footer .footer-nav dl dt {
   color: #e0e0e0;
   font-size: 14px;
   height: 30px;
@@ -28,7 +30,7 @@ footer .footer-nav dl dt {
   font-weight: bold;
 }
 
-footer .footer-nav dl dd {
+.footer .footer-nav dl dd {
   font-size: 14px;
   height: 24px;
   line-height: 24px;
@@ -37,27 +39,28 @@ footer .footer-nav dl dd {
   color: #e0e0e0;
 }
 
-footer .footer-nav dl dd :hover {
+.footer .footer-nav dl dd :hover {
   color: red;
 }
 
-footer .footer-nav dl dd a {
+.footer .footer-nav dl dd a {
   display: block;
   color: #e0e0e0;
 }
 
-footer .p1 a {
+.footer .p1 a {
   color: #686868;
   font-size: 12px;
   padding: 0 2px 0 2px;
   border-right: 1px solid #ddd;
+  color: #fff;
 }
 
-footer .p1 :hover {
+.footer .p1 :hover {
   color: red;
 }
 
-footer .p2 {
+.footer .p2 {
   color: #8d8d8d;
   font-weight: lighter;
   font-size: 12px;

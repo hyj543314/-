@@ -137,6 +137,77 @@
         height: 3px;
         background: #E0E0E0;
     }
+    .main_con{
+        height: 138px;
+        border:1px solid #ccc;
+        border-top:3px solid #FFD1C0;
+        margin-bottom:96px;
+        vertical-align:middle;
+        .checkbox{
+            width: 30px;
+            // height: 138px;
+            // display:inline-block;
+            // padding:30px;
+            position:relative;
+            input{
+            position:absolute;
+            top:20px;
+            left:12px;
+            margin-left:15px;
+            margin-bottom:15px;
+            display:inline-block;
+            }
+        }
+        .info1{
+            width: 502px;
+            display:inline-block;
+            text-align:center;
+            margin-top:19px;
+            margin-left:47px;
+           
+            a{
+                color: #585552;
+                font-size:12px;
+                float: left;
+                margin-left:10px;
+                img{
+                     border:1px solid #ccc;
+                }            
+            }
+            span{
+                display:block;
+                margin-left:122px;
+                text-align:left;
+                font-size:12px;
+            }
+        }
+        .info2{
+            float:right;
+            height: 138px;
+            // text-align:center;
+            font-size:12px;
+            line-height: 138px;
+            ul{
+               // text-align:center; 
+               padding-right:30px;
+                li{
+                    float: left;
+                    margin-left:70px;
+                    input{
+                        width: 55px;
+                        height: 20px;
+                    }
+                    span{
+                        display:inline-block;
+                        width: 20px;
+                        height: 20px;
+                        border:1px solid #ccc;
+                        margin-top:49px;
+                    }
+                }
+            }
+        }
+    }
     .main_bottom{
         height: 50px;
         line-height: 50px;

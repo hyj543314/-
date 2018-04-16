@@ -2,19 +2,26 @@
 	// 引入其他文件
 	require('connect.php');//include 'connect.php'
 
-	$phone = isset($_GET['phone']) ? $_GET['phone'] : null;
-	$password = isset($_GET['password']) ? $_GET['password'] : null;
+	$email = isset($_GET['email']) ? $_GET['email'] : null;
+	$pwd = isset($_GET['pwd']) ? $_GET['pwd'] : null;
+	$pwd2 = isset($_GET['pwd2']) ? $_GET['pwd2'] : null;
+	$name = isset($_GET['name']) ? $_GET['name'] : null;
+	$code = isset($_GET['code']) ? $_GET['code'] : null;
 
 	// 判断用户名是否存在
-	$data = $conn->query("select * from user where phone='$phone'");
+	$data = $conn->query("select * from user where email='$email'");
+	$data = $conn->query("select * from user where pwd='$pwd'");
+	$data = $conn->query("select * from user where pwd2='$pwd2'");
+	$data = $conn->query("select * from user where name='$name'");
+	$data = $conn->query("select * from user where code='$code'");
 
 
 	if($data->num_rows == 0){
 		// 密码md5加密
-		// $password = md5($password);
+		// $pwd2 = md5($pwd2);
 		
 		// 写入数据sql语句
-		$sql = "insert into user(phone,password) values('$phone','$password')";
+		$sql = "insert into user(email,pwd,pwd2,name,code) values('$email','$pwd','$pwd2','$name','$code')";
 
 		$res = $conn->query($sql);
 

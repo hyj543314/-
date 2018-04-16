@@ -1,14 +1,18 @@
 <?php
-	// 引入其他文件
-	require('connect.php');//include 'connect.php'
+    require('connect.php');
 
-	$id = isset($_GET['id']) ? $_GET['id'] : '';
+    $id = isset($_GET['id']) ? $_GET['id'] : '';
 
-	$sql = "select * from goods where id=$id";
+    $sql = "select * from list";
 
-	$res = $conn->query($sql);
+    if($id){
+        $sql .= "where id='$id'";
+    }
 
-	$row = $res->fetch_assoc();
+    $res = $conn -> query($sql);
 
-	echo json_encode($row,JSON_UNESCAPED_UNICODE);
-?>
+    $arr = $res->fetch_assoc();
+
+    $res->free();
+    $conn->close();
+    echo json_encode($arr,JSON_UNESCAPED_UNICODE);

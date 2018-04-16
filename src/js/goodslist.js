@@ -2,18 +2,18 @@ require(['config'],function(){
 	require(['jquery','carousel','zoom','com'],function($,carou,zoom,com){
 		// console.log('list');
 		// 引入header头部的html结构
-		$('.pageHeader').load('../html/header.html',function(){
+		// $('.pageHeader').load('../html/header.html',function(){
 			// console.log('complete');
 			// 引入头部的js文件
-			require(['head'],function(){
+			// require(['head'],function(){
 				// console.log('index');
-				var $main_con = $('.main .main_goods');
-				// console.log($main_goods);
+				var $main_con = $('.lists');
+				 
 
 				// ajax请求数据
 				let pageNo = 1;
-				let qty = 16;
-				var $mainPag = $('.main .page');
+				let qty = 20;
+				var $mainPage = $('.page');
 				$.ajax({
 					type: 'post',
 					data: `pageNo=${pageNo}&qty=${qty}`,
@@ -30,7 +30,7 @@ require(['config'],function(){
 
 
 				// 点击页码切换分页
-				$mainPag.on('click','span',function(){
+				$mainPage.on('click','a',function(){
 					console.log(this);
 					pageNo = this.innerText*1;
 					$.ajax({
@@ -39,6 +39,7 @@ require(['config'],function(){
 						url: '../api/list.php',
 						success:function(res){
 							res = JSON.parse(res);
+							console.log(res);
 							showGoods(res);
 						}
 					})
@@ -46,7 +47,8 @@ require(['config'],function(){
 
 
 				// 价格从高到低排序(需要从数据库获取商品数据，但数据库的商品数据是无序的)
-				var $priceDown = $('.main .goodsPri');
+				var $priceDown = $('.main .sort');
+
 				$priceDown.on('click','a',function(event){
 					// 获取当前元素的索引值
 					let idx = $(this).index();
@@ -57,30 +59,36 @@ require(['config'],function(){
 					
 				})
 
-
 				// 根据请求到的数据生成html结构
 				function showGoods(res){
+					
 					let $ul = $('<ul/>').addClass('clearfix goods');
 						
 					let ul_int = $.map(res.data,function(item,i){
-						// console.log(item,i);
+						
 						return `<li data-guid="${item.id}">
-							<a href="detail.html" class="imgA" target="_blank">
-								<img src="../${item.imgurl}">
-							</a>
-							<p class="desp">${item.name}</p>
-							<p class="price">￥ ${item.price}</p>
-							<div class="bot">
-								<a href="detail.html" target="_blank">可定制</a>
-								<span class="comment fr"><i>30<i>人评价</span>
+							<div class="imgBox">
+								<a  class="imgA" target="_blank">
+									<img src="../${item.img}">
+								</a>
 							</div>
+							
+							<div class="text">
+								<a  class="title" target="_blank">
+									${item.title}
+								</a>
+							</div>
+							<p class="price"><span>￥ ${item.price}</span><del>￥${item.del_price}</del></p>
+							
 						</li>`
+
 					}).join('');
 					$ul.html(ul_int);
 					// 写入页面
 					$main_con.html('');
 					$main_con.append($ul);
 					addClassLast($ul);
+					$ul.appendTo($main_con);
 
 					// 给边界的li添加last的类名(传入一个li父级的对象)
 					function addClassLast($item,num=4){
@@ -94,37 +102,36 @@ require(['config'],function(){
 
 
 					// 处理分页
-					// var $mainPag = $('.main .page');
+					// var $mainPage = $('.main .page');
 					let pageQty = Math.ceil(res.total/res.qty);
 
 					// 生成页码
 					// 添加内容到页面时先清空原来的东西，以免叠加
-					$mainPag.html('');
+					$mainPage.html('');
 					for(let i=1;i<=pageQty;i++){
-						let $span = $('<span/>').html(i);
+						let $a = $('<a/>').html(i);
 						if(i === res.pageNo){
-							$span.addClass('active');
+							$a.addClass('active');
 						}
-						$mainPag.append($span);
+						$mainPage.append($a);
 					}
 				}
 
 
-
+				console.log($('.lists'));
 				// 点击商品跳转时传输id
-				$main_con.on('click','a',function(e){
-					// console.log(e.target,this);
+				$('.lists').on('click','li',function(e){
+					console.log(666);
 					let idx = $(this).closest('li').attr('data-guid');
-					this.href = `detail.html?id=${idx}`;
-					console.log(this.href);
+					/*this.href = `goods.html?id=${idx}`;
+					console.log(this.href);*/
+					location.href = `goods.html?id=${idx}`;
 				})
 
+				// 导入尾部文件
+				$('footer').load('../html/foot.html');
 
-
-				// 载入尾部内容
-				$('.pageFooter').load('../html/footer.html');
-
-			})
-		})
+			// })
+		// })
 	})
 })

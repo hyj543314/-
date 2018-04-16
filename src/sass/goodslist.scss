@@ -27,7 +27,7 @@
 
 
 .main{
-    height: 1601px;
+    // height: 1601px;
     margin-top:8px;
     overflow:hidden;
     .nav_info{
@@ -379,10 +379,59 @@
                     }
                 }
             }
-            .category_pro_list{
-
+            
+        }
+        .goodslist{
+            width: 960px;
+            overflow: hidden;
+            float: right;
+            ul{
+                li{
+                    width: 230px;
+                    overflow: hidden;
+                    padding: 12px;
+                    float: left;
+                    margin-right:10px;
+                    .imgBox{
+                        height: 218px;
+                        width: 218px;
+                        border: 1px solid #eeeeee;
+                        overflow: hidden;
+                        // display: table-cell;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                    .text{
+                        width: 220px;
+                        height: 40px;
+                        line-height: 20px;
+                        overflow: hidden;
+                        margin-top: 10px;
+                        a{
+                            color: #686868;
+                            font-size:12px;
+                        }
+                    }
+                    .price{
+                        span{
+                            float: left;
+                            color: #ff2d2e;
+                            padding-right: 10px;
+                            font-size: 14px;
+                            // margin-top:3px;
+                        }
+                        del{
+                            float: left;
+                            text-decoration: line-through;
+                            margin-top: 2px;
+                            color: #999;
+                            font-size:12px;
+                        }
+                    }
+                }
             }
-            .page .page0,.page .page-next{
+        }
+       .page .page0,.page .page-next{
                     display:inline-block;
                     width: 30px;
                     height: 28px;
@@ -397,11 +446,27 @@
                     text-align:center;
                 }
             .page{
-                float: right;
-                color: #999;
-                margin-top: 15px;
-                margin-bottom: 15px;
-                line-height: 28px;
+                float:right;
+                color:#999;
+                margin-top:15px;
+                margin-bottom:15px;
+                line-height:28px;
+                margin-right:100px;
+                a{
+                    display:block;
+                    width:30px;
+                    height:30px;
+                    border:1px solid #ccc;
+                    text-align:center;
+                    border-radius:50%;
+                    line-height:30px;
+                    margin:10px;
+                    float:left;
+                }
+                .active{
+                    background:skyblue;
+                    color:#fff;
+                }
                 .page-next{
                     width: 64px;
                 }
@@ -411,11 +476,10 @@
                         width: 50px;
                         margin-left: 10px;
                         a{
-                        color: #999;
+                            color: red;
                         }
                     }
                 }
             }
-        }
     }
 }

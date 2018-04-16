@@ -8,7 +8,7 @@
 	// $id = isset($_GET['id']) ? $_GET['id'] : null;
 
 	// 编写sql语句
-	$sql = "select * from goods where";
+	$sql = "select * from list where";
 
 	// if($id){
 	// 	$sql .= " id='$id' and";
@@ -16,7 +16,7 @@
 
 	// 根据分类改变sql语句
 	if($cat){
-		$sql .= " category='$cat' and"; //select * from goods where category=nike
+		$sql .= " category='$cat' and"; //select * from list where category=nike
 	}
 
 	$sql .= ' 1=1';

@@ -8,7 +8,6 @@
 }
 
 .main {
-  height: 1601px;
   margin-top: 8px;
   overflow: hidden;
 }
@@ -376,7 +375,58 @@
   font-size: 12px;
 }
 
-.main .category .category_r .page .page0, .main .category .category_r .page .page-next {
+.main .category .goodslist {
+  width: 960px;
+  overflow: hidden;
+  float: right;
+}
+
+.main .category .goodslist ul li {
+  width: 230px;
+  overflow: hidden;
+  padding: 12px;
+  float: left;
+  margin-right: 10px;
+}
+
+.main .category .goodslist ul li .imgBox {
+  height: 218px;
+  width: 218px;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.main .category .goodslist ul li .text {
+  width: 220px;
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.main .category .goodslist ul li .text a {
+  color: #686868;
+  font-size: 12px;
+}
+
+.main .category .goodslist ul li .price span {
+  float: left;
+  color: #ff2d2e;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.main .category .goodslist ul li .price del {
+  float: left;
+  text-decoration: line-through;
+  margin-top: 2px;
+  color: #999;
+  font-size: 12px;
+}
+
+.main .category .page .page0, .main .category .page .page-next {
   display: inline-block;
   width: 30px;
   height: 28px;
@@ -391,24 +441,42 @@
   text-align: center;
 }
 
-.main .category .category_r .page {
+.main .category .page {
   float: right;
   color: #999;
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 28px;
+  margin-right: 100px;
 }
 
-.main .category .category_r .page .page-next {
+.main .category .page a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 30px;
+  margin: 10px;
+  float: left;
+}
+
+.main .category .page .active {
+  background: skyblue;
+  color: #fff;
+}
+
+.main .category .page .page-next {
   width: 64px;
 }
 
-.main .category .category_r .page span button {
+.main .category .page span button {
   display: inline-block;
   width: 50px;
   margin-left: 10px;
 }
 
-.main .category .category_r .page span button a {
-  color: #999;
+.main .category .page span button a {
+  color: red;
 }

@@ -80,7 +80,8 @@
 				$page = $('<div/>').addClass('page');
 				var spans = '';
 				for(var i=0;i<opt.len-1;i++){
-					spans += '<span>'+ (i+1) + '</span>';
+					// spans += '<span>'+ (i+1) + '</span>';
+					spans += '<span>' + '</span>';
 				}
 				$page.html(spans);
 				$this.append($page);

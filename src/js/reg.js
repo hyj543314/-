@@ -1,70 +1,93 @@
 require(['config'],function(){
 	require(['jquery','com'],function($,com){
-		// 引入头部文件
-		$('.regHeader').load('../html/header.html',function(){
-			// 引入头部的js文件
-			require(['head'],function(){
-				// console.log(444);
-				var it1,it2,it3;
-				var num;
 
-				// 匹配手机号码
-				var phone;
-				$('#phone').on('change',function(){
-					// phone = $(this).attr('value');
-					phone = this.value;
-					console.log('phone',phone);
-					if(!/^1[34578]\d{9}$/.test(phone)){
-						it1 = 0;
-						$(this).next().text('手机输入不正确');
+				var a = false;
+
+				// 验证邮箱
+				var email;
+				$('#email').on('change',function(){
+					// email = $(this).attr('value');
+					
+					email = this.value;
+					console.log('email',email);
+					if(!/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(email)){
+						a = false;
+						$(this).next().text('邮箱由6-50位字符组成');
 					}else{
 						// console.log(111);
 						$(this).next().text('');
-						it1 = 1;
+						a = true;
 					}
 				})
 
 
-				// 密码合法性
-				var password;
-				$('#password').on('change',function(){
-					password = this.value;
-					console.log('password',password);
-					if(!/^[^\s]{6,12}$/.test(password)){
-						it2 = 0;
-						$(this).next().text('密码不合法');
+				// 验证密码
+				var pwd;
+				$('#pwd').on('change',function(){
+					pwd = this.value;
+					console.log('pwd',pwd);
+					if(!/^[^\s]{6,20}$/.test(pwd)){
+						a = false;
+						$(this).next().text('密码长度只能在6-20位字符之间');
 					}else{
 						$(this).next().text('');
-						it2 = 1;
+						a = true;
 					}
 				})
 
 
-				// 判断两次输入密码是否一致
-				$('#password2').on('change',function(){
+				// 判断两次输入密码是否一致（确认密码）
+				$('#pwd2').on('change',function(){
 					var val = this.value;
-					// console.log('val',val,'password:',password);
-					if(val !== password){
-						it3 = 0;
+					// console.log('val',val,'pwd:',pwd);
+					if(val !== pwd){
+						a = false;
 						// console.log('不一样')
 						$(this).next().text('密码不一致');	
 					}else{
-						it3 = 1;
+						a = true;
 						// console.log('一样');
 						$(this).next().text('');
 					}
 				})
 
 
-				// 注册
-				$('.rg_bt').on('click','a',function(e){
-					num = it1 + it2 + it3;
-					if(num !== 3){
-						e.preventDefault();
+				//验证姓名
+				var name;
+				$('#name').on('change',function(){
+					name = this.value;
+					console.log('name',name);
+					if(!/^[^\s]{2,20}$/.test(name)){
+						a = false;
+						$(this).next().text('2-20位字符，可由中文或英文组成');
 					}else{
+						$(this).next().text('');
+						a = true;
+					}
+				})
+
+
+  				
+  				$("#code").on('click',()=>{
+  					let vCode = '';
+  					let arr = '0123456789ABCDEFGHIGKLMNOPQRSTUVXYZabcdefghigklmnopqrstuvwxyz'.split('');
+  					
+  					for(let i=0;i<4;i++){
+  						vCode += arr[parseInt(Math.random()*arr.length)];
+  					}
+  					$('.show').html(vCode);
+  				})
+
+				// 注册
+				$('.submit').on('click',function(e){
+						
+					if(!a){
+						console.log("false")
+					}else{
+						console.log('true');
 						$.ajax({
 							url: '../api/reg.php',
-							data:`phone=${phone}&password=${password}`,
+							data:`email=${email}&pwd=${pwd}$pwd2=${pwd2}&name=${name}&code=${code}`,
 							success: function(res){
 								console.log(res);
 								if(res === 'success'){
@@ -76,13 +99,6 @@ require(['config'],function(){
 							}
 						})
 					}
-					// console.log(num,it1,it2,it3);
 				})
-
-
-
-				$('.regFooter').load('../html/footer.html');
 			})
-		})
-	})
 })

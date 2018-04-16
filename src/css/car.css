@@ -119,6 +119,83 @@
   background: #E0E0E0;
 }
 
+.main .main_con {
+  height: 138px;
+  border: 1px solid #ccc;
+  border-top: 3px solid #FFD1C0;
+  margin-bottom: 96px;
+  vertical-align: middle;
+}
+
+.main .main_con .checkbox {
+  width: 30px;
+  position: relative;
+}
+
+.main .main_con .checkbox input {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.main .main_con .info1 {
+  width: 502px;
+  display: inline-block;
+  text-align: center;
+  margin-top: 19px;
+  margin-left: 47px;
+}
+
+.main .main_con .info1 a {
+  color: #585552;
+  font-size: 12px;
+  float: left;
+  margin-left: 10px;
+}
+
+.main .main_con .info1 a img {
+  border: 1px solid #ccc;
+}
+
+.main .main_con .info1 span {
+  display: block;
+  margin-left: 122px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.main .main_con .info2 {
+  float: right;
+  height: 138px;
+  font-size: 12px;
+  line-height: 138px;
+}
+
+.main .main_con .info2 ul {
+  padding-right: 30px;
+}
+
+.main .main_con .info2 ul li {
+  float: left;
+  margin-left: 70px;
+}
+
+.main .main_con .info2 ul li input {
+  width: 55px;
+  height: 20px;
+}
+
+.main .main_con .info2 ul li span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  margin-top: 49px;
+}
+
 .main .main_bottom {
   height: 50px;
   line-height: 50px;

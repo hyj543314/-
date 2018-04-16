@@ -3,13 +3,13 @@
 	require('connect.php');
 	
 	// 获取前端数据
-	$phone = isset($_GET['phone']) ? $_GET['phone'] : '';
+	$email = isset($_GET['email']) ? $_GET['email'] : '';
 	$password = isset($_GET['password']) ? $_GET['password'] : '';
 
 	// 密码md5加密
 	// $password = md5($password);
 
-	$sql = "select * from user where phone='$phone' and password='$password'";
+	$sql = "select * from user where email='$email' and password='$password'";
 
 
 	// 获取查询结果

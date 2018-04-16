@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/reg.css">
 <script src="../js/require.js" data-main="../js/reg"></script>
+<!-- <script type="text/javascript" src="../js/common.js"></script> -->
 <body>
 	<header>
 		<div class="container">
@@ -19,30 +20,33 @@
 				</div>
 			</div>
 			<div class="header_b">
-				<span>我已注册，现在就去<a href="#">登录</a></span>
+				<span>我已注册，现在就去<a href="login.html">登录</a></span>
 			</div>
 		</div>
 	</header>
 	<div class="main">
 		<div class="reg">
-			<label for="email">邮箱</label><input type="text" id="email" /><span>6-50位字符组成</span> <br />
-			<label for="pwd">密码</label><input type="text" id="pwd" /><span>6-20位字符，可由英文、数字及标点符号组成</span> <br />
-            <label for="pwd2">确认密码</label><input type="text" id="pwd2" /><span>请再次输入密码</span> <br />
-            <label for="name">真实姓名</label><input type="text" id="name" /><span>6-20位字符，可由中文或英文组成</span> <br />
-            <label for="gender">性别</label><input type="text" id="gender"/><br />
-            <!-- 性别<input type="radio" name="gender" checked/>男 <input type="radio" name="gender"/>女   <br /> -->
+			<label for="email">邮箱</label><input type="text" id="email" /><span><!-- 6-50位字符组成 --></span> <br />
+			<label for="pwd">密码</label><input type="text" id="pwd" /><span><!-- 6-20位字符，可由英文、数字及标点符号组成 --></span> <br />
+            <label for="pwd2">确认密码</label><input type="text" id="pwd2" /><span><!-- 请再次输入密码 --></span> <br />
+            <label for="name">真实姓名</label><input type="text" id="name" /><span><!-- 2-20位字符，可由中文或英文组成 --></span> <br />
+            <!-- <label for="gender">性别</label><input type="text" id="gender"/><br /> -->
+            <div class="gender">
+            <span>性别</span>
+            <input type="radio" name="gender" checked/>男 <input type="radio" name="gender"/>女
+            </div>
             <div class="birthday"><span>生日</span><input type="datetime-local" /> <br /></div>
+            <span><!-- 请输入生日 --></span> <br />
             <!-- <label for="birthday">生日</label><input type="text" id="birthday"/><br /> -->
             <label for="yanzheng">图形验证码</label><input type="text" id="yanzheng" />
-            <span id="code"></span><a href="#" onclick="createCode()">看不清，换一个</a> <span>请输入验证码，不区分大小写</span><br />
+            <span id="code">看不清?换一张 </span>
+            <span class="show" style="width: 5px;height:8px;background:#ccc;"></span>
+ 
             <p>
 	            <input type="checkbox" class="checkbox"/>
 	            <span> 我已阅读并同意<a href="#">  会员注册协议 </a></span>
             </p><br />
             <input type="submit" value="立即注册" class="submit" /><br />
-            
-
-
 		</div>
 	</div>
 	<footer>

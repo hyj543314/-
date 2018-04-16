@@ -1,8 +1,8 @@
 .lzx-carousel{position:relative;width:810px;height:320px;margin:0 auto;overflow: hidden;}
 .lzx-carousel ul{list-style:none;padding:0;margin:0;position:absolute;top:0;left:0;}
-.lzx-carousel img{display: block;width:100%;}
+.lzx-carousel img{display: block;width:100%;height: 400px;}
 .lzx-carousel .next,.lzx-carousel .prev{position:absolute;left:0;top:50%;transform: translate(0,-50%);padding:10px 5px;width:30px;height:50px;line-height:50px;background-color: rgba(0,0,0,.3);text-align:center;color:#fff;}
 .lzx-carousel .next{left:auto;right:0;}
-.lzx-carousel .page{position: absolute;right:15px;bottom:15px;}
-.lzx-carousel .page span{display:inline-block;margin:0 5px;width:30px;height:30px;line-height:30px;text-align:center;background-color:#efefef;border-radius:50%;}
+.lzx-carousel .page{position: absolute;right:340px;bottom:15px;width: 130px;height: 24px;padding-top:5px;background: #80A6BF;border-radius: 10px;}
+.lzx-carousel .page span{display:inline-block;margin:0 5px;width:14px;height:14px;line-height:24px;text-align:center;background-color:#efefef;border-radius:50%;}
 .lzx-carousel .page span.active{background-color:#f60;color:#fff;}
